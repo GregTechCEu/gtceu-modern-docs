@@ -1,0 +1,55 @@
+site_name: GregTech CEu Modern Docs
+
+repo_name: GregTech CEu Modern
+repo_url: https://github.com/GregTechCEu/GregTech-Modern
+
+theme:
+  name: material
+  logo: .static/assets/logo.png
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - toc.follow
+
+plugins:
+  - search
+
+extra_css:
+  - .static/stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/bWSWuYvURP
+    - icon: simple/curseforge
+      link: https://www.curseforge.com/minecraft/mc-mods/gregtechceu-modern/files
+    - icon: simple/modrinth
+      link: https://modrinth.com/mod/gregtechceu-modern
+    - icon: fontawesome/brands/github
+      link: https://github.com/GregTechCEu/GregTech-Modern
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
