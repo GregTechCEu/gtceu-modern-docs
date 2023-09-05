@@ -6,6 +6,10 @@ on:
       - master
       - main
 
+permissions:
+  contents: read
+  pages: write
+  
 jobs:
   build:
     name: Deploy docs
