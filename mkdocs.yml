@@ -5,7 +5,7 @@ repo_url: https://github.com/GregTechCEu/GregTech-Modern
 
 theme:
   name: material
-  logo: .static/assets/logo.png
+  logo: assets/logo.png
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -30,7 +30,7 @@ plugins:
   - search
 
 extra_css:
-  - .static/stylesheets/extra.css
+  - stylesheets/extra.css
 
 extra:
   social:
