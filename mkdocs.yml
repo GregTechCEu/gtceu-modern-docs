@@ -25,6 +25,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - toc.follow
+    - content.code.annotate
 
 plugins:
   - search
