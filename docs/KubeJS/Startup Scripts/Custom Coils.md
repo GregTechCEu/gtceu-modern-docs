@@ -1,7 +1,7 @@
 ---
 title: Custom Coils
 ---
-### Coil Creation
+## Coil Creation
 ```js
 StartupEvents.registry('block', event => {
     event.create('infinity_coil_block', 'gtceu:coil')
