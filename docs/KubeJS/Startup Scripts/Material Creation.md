@@ -2,7 +2,7 @@
 title: Material Creation
 ---
 
-### Creating an Ingot
+## Creating an Ingot
 
 ```js title="ingot.js"
 GTCEuStartupEvents.registry('gtceu:material', event => {
@@ -14,7 +14,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 })
 ```
 
-### Creating a Gem
+## Creating a Gem
 
 ```js title="gem.js"
 GTCEuStartupEvents.registry('gtceu:material', event => {
@@ -26,7 +26,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 })
 ```
 
-### Creating a Dust
+## Creating a Dust
 ```js title="dust.js"
 GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create('mysterious_dust')
@@ -36,7 +36,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 ```
 4. Voltage, Amperage, EU loss, Is Superconductor.
 
-### Creating a Fluid
+## Creating a Fluid
 ```js title="fluid.js"
 GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create('mysterious_ooze')
@@ -47,7 +47,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 ```
 
 
-### Material Flags
+## Material Flags
 ```js
 - GTMaterialFlags.BLAST_FURNACE_CALCITE_DOUBLE
 - GTMaterialFlags.BLAST_FURNACE_CALCITE_TRIPLE
@@ -90,7 +90,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 - GTMaterialFlags.STICKY
 ```
 
-### Icon Sets
+## Icon Sets
 ```js
 - GTMaterialIconSet.BRIGHT
 - GTMaterialIconSet.CERTUS
@@ -120,7 +120,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 ```
 1. Used for specifying custom iconsets, for example `GTMatericalIconset.get('infinity')`.
 
-### Properties (WIP)
+## Properties (WIP)
 ```js
 - BlastProperty:
    - .blastTemp() // (2)
