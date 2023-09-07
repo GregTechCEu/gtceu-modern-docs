@@ -2,7 +2,7 @@
 title: Element Creation
 ---
 
-### Element Creation
+## Element Creation
 ```js
 GTCEuStartupEvents.registry('gtceu:element', event => {
    event.create('test_element', 27, 177, -1, null, 'test', false) // (1)
