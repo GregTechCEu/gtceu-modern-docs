@@ -2,9 +2,11 @@
 title: Item/Fluid/Energy Storage
 ---
 
+
 # How to add an Item Inventory / Fluid Storage / Energy Container
 
 !!! note
+
     In general, these containers should be created as `final` fields (that's what we need for the
     [SyncData](./SyncData/index.md) system).  
     Set their base arguments in the constructor (you can pass args for subclasses to modify).
@@ -25,7 +27,6 @@ of internal changes to improve performance.
 
 - `handlerIO`: Whether the container is regarded as input or output during recipe processing
 - `capabilityIO`: Whether the player can use hoppers, pipes, cables, etc. to interact with the storage
-
 
 
 ## General-Purpose implementations
@@ -53,6 +54,7 @@ In case you have special requirements to your containers, you may be able to use
 conjunction with one or more regular containers.  
 They generally act as a proxy to the underlying container(s), while also handling these requirements.
 
+
 ### Proxying multiple containers
 
 - `ItemTransferList`
@@ -70,7 +72,7 @@ For proxying multiple containers, limited to a specific IO direction.
 
 ### Rate-Limited proxies
 
-!!! warning inline end "Not merged yet.<br>(branch: `mi-ender-link`)"
+!!! warning inline end "Not merged yet<br>_Branch: `mi-ender-link`_"
 
 If you need to proxy any item or fluid container that needs to be rate limited for insertion and extraction, you can
 use either of the following classes:
@@ -85,6 +87,7 @@ If you want to make this a rate limit instead, you will have to schedule a task 
 limit to the maximum value for your task's interval:
 
 ??? example "Example Usage"
+
     ```java
     public class MyCover extends CoverBehavior {
         private LimitingFluidTransferProxy transferProxy;

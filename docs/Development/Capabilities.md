@@ -2,8 +2,8 @@
 title: Capabilities
 ---
 
-# How to access Capabilities of blocks and items
 
+# How to access Capabilities of blocks and items
 
 Fabric doesn't have a capability system like Forge does, but you can use several utility methods instead:
 

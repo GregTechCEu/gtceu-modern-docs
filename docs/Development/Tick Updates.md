@@ -26,6 +26,7 @@ Lets look at how we implement it in `QuantumChest`.
 
 
 ??? example "Implementation in `QuantumChest`"
+
     ```java
     @Getter @Persisted @DescSynced
     protected boolean autoOutputItems;
@@ -95,11 +96,10 @@ Lets look at how we implement it in `QuantumChest`.
         super.onNeighborChanged(block, fromPos, isMoving);
         updateAutoOutputSubscription();
     }
-    
     ```
+
 I know the code is a kinda long, but it's for performance, and thanks to the SyncData system, we've eliminated a lot of
 synchronization code, so please sacrifice a little for better performance.
-
 
 
 ## Using the `ConditionalSubscriptionHandler`
@@ -116,6 +116,7 @@ You should also to call this method after executing your tick logic in most case
 stay active any longer than it needs to.
  
 ??? example "Example using `ConditionalSubscriptionHandler`"
+
     ```java
     class MyMachine extends MetaMachine implements IControllable {
         @Persisted @Getter

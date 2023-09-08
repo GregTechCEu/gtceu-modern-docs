@@ -2,6 +2,7 @@
 title: Overclocking & Parallel Logic
 ---
 
+
 # How to set up Overclocking and Parallel Logic
 
 To improve its generality, RecipeLogic has been rewritten in GTCEu Modern to support inputs and outputs other than
