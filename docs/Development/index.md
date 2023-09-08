@@ -2,6 +2,7 @@
 title: Developer Documentation
 ---
 
+
 # Developing GTCEu Modern
 
 If you want to contribute to the development of GTCEu Modern, please feel free to submit a 
