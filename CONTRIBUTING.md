@@ -106,8 +106,8 @@ Use [annotations](https://squidfunk.github.io/mkdocs-material/reference/annotati
 
 There must be an empty line before the first annotation or they won't work properly.
 
-**Always** add two empty lines after the last annotation.  
-Also add an empty line between each annotation if at least one in the current block is longer than a single line.
+Also add an empty line between each annotation if at least one in the current block is longer than a single line.  
+In that case, add two empty lines after the end of the annotation list.
 
 Annotations must be numbered starting at 1 **for each block** of consecutive annotations.  
 If they are separated by another element, you need to start at 1 again for the next block of annotations:
