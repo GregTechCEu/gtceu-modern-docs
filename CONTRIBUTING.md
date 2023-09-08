@@ -53,8 +53,9 @@ Please use the following formatting rules for standard markdown:
 
 Use [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) in the following situations:
 
-- If you want to provide additional info or tips, use the an `info` admonition.
-- For general notes on _when_ or _how_ to use a specific feature, use the `note` type.
+- If you want to provide additional info about a feature, use the an `info` admonition.
+- For tips / recommendations on _when_ or _how_ to use a feature, use he `tip` admonition type.
+  - For general notes on _when_ or _how_ to use a specific feature (in development related docs), use the `note` type.
 - For warning about possible bugs or unwanted behavior, use the `warning` type.
 - If a feature may result in destructive actions in certain scenarios, use the `danger` type.
 - For providing code examples, use the `example` type.  
