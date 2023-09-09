@@ -128,7 +128,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 - GTMaterialIconSet.SAND
 - GTMaterialIconSet.SHINY
 - GTMaterialIconSet.WOOD
-- GTMatericalIconset.get('') // (1)
+- GTMaterialIconSet.get('') // (1)
 ```
 
 1. Used for specifying custom iconsets, for example `GTMatericalIconset.get('infinity')`.
