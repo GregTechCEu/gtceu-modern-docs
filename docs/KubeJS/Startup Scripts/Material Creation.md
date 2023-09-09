@@ -29,7 +29,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 })
 ```
 
+
 ## Creating a Dust
+
 
 ```js title="dust.js"
 GTCEuStartupEvents.registry('gtceu:material', event => {
