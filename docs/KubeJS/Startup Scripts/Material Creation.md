@@ -133,7 +133,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 1. Used for specifying custom iconsets, for example `GTMatericalIconset.get('infinity')`.
 
+
 ## Properties (WIP)
+
 ```js
 - BlastProperty:
    - .blastTemp() // (1)
