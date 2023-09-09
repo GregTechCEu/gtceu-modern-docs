@@ -6,6 +6,7 @@ repo_url: https://github.com/GregTechCEu/GregTech-Modern
 theme:
   name: material
   logo: assets/logo.png
+  favicon: assets/favicon.png
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -23,6 +24,8 @@ theme:
         name: Switch to light mode
   features:
     - navigation.instant
+    - navigation.sections
+    - navigation.indexes
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top

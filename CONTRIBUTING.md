@@ -53,8 +53,9 @@ Please use the following formatting rules for standard markdown:
 
 Use [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) in the following situations:
 
-- If you want to provide additional info or tips, use the an `info` admonition.
-- For general notes on _when_ or _how_ to use a specific feature, use the `note` type.
+- If you want to provide additional info about a feature, use the an `info` admonition.
+- For tips / recommendations on _when_ or _how_ to use a feature, use he `tip` admonition type.
+  - For general notes on _when_ or _how_ to use a specific feature (in development related docs), use the `note` type.
 - For warning about possible bugs or unwanted behavior, use the `warning` type.
 - If a feature may result in destructive actions in certain scenarios, use the `danger` type.
 - For providing code examples, use the `example` type.  
@@ -105,8 +106,8 @@ Use [annotations](https://squidfunk.github.io/mkdocs-material/reference/annotati
 
 There must be an empty line before the first annotation or they won't work properly.
 
-**Always** add two empty lines after the last annotation.  
-Also add an empty line between each annotation if at least one in the current block is longer than a single line.
+Also add an empty line between each annotation if at least one in the current block is longer than a single line.  
+In that case, add two empty lines after the end of the annotation list.
 
 Annotations must be numbered starting at 1 **for each block** of consecutive annotations.  
 If they are separated by another element, you need to start at 1 again for the next block of annotations:
