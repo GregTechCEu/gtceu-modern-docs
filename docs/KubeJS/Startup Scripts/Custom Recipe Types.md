@@ -19,6 +19,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
 1. Max Item Inputs, Max Item Outputs, Max Fluid Inputs, Max Fluid Outputs
 
+
 ```js title="test_kinetic_recipe_type.js"
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('test_recipe_type')
