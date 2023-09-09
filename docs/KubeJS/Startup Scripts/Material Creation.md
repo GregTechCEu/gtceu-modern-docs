@@ -2,6 +2,7 @@
 title: Material Creation
 ---
 
+
 ## Creating an Ingot
 
 ```js title="ingot.js"
@@ -27,16 +28,19 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 ```
 
 ## Creating a Dust
+
 ```js title="dust.js"
 GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create('mysterious_dust')
         .dust()
-        .cableProperties(GTValues.V[GTValues.LV], 69, 0, true) // (4)
+        .cableProperties(GTValues.V[GTValues.LV], 69, 0, true) // (1)
 })
 ```
-4. Voltage, Amperage, EU loss, Is Superconductor.
+
+1. Voltage, Amperage, EU loss, Is Superconductor.
 
 ## Creating a Fluid
+
 ```js title="fluid.js"
 GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create('mysterious_ooze')
@@ -46,9 +50,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 })
 ```
 
-
 ## Material Flags
-```js
+```js 
 - GTMaterialFlags.BLAST_FURNACE_CALCITE_DOUBLE
 - GTMaterialFlags.BLAST_FURNACE_CALCITE_TRIPLE
 - GTMaterialFlags.CRYSTALLIZABLE
@@ -91,7 +94,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 ```
 
 ## Icon Sets
-```js
+
+```js 
 - GTMaterialIconSet.BRIGHT
 - GTMaterialIconSet.CERTUS
 - GTMaterialIconSet.DIAMOND
@@ -118,37 +122,45 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 - GTMaterialIconSet.WOOD
 - GTMatericalIconset.get('') // (1)
 ```
+
 1. Used for specifying custom iconsets, for example `GTMatericalIconset.get('infinity')`.
 
 ## Properties (WIP)
 ```js
 - BlastProperty:
-   - .blastTemp() // (2)
-   - .gasTier() // (3)
-   - .durationOverride() // (4)
-   - .eutOverride() // (5)
+   - .blastTemp() // (1)
+   - .gasTier() // (2)
+   - .durationOverride() // (3)
+   - .eutOverride() // (4)
 - DustProperty:
-   - .dust() // (6)
+   - .dust() // (5)
 - FluidPipeProperty:
-   - .fluidPipeProperties() // (7)
+   - .fluidPipeProperties() // (6)
 - FluidProperty:
-   - .fluid() // (8)
-   - .isGas() // (9)
+   - .fluid() // (7)
+   - .isGas() // (8)
    - .hasBlock() 
 - GemProperty:
    - .gem()
 - IngotProperty:
-   - .ingot() // (10)
+   - .ingot() // (9)
       - .smeltInto()
       - .arcSmeltInto()
       - .magneticMaterial()
       - .macerateInto()
 - OreProperty:
-   - .ore() // (11)
+   - .ore() // (10)
 ```
-2. Sets the Blast Furnace Temperature of the material. If the temperature is below 1000K recipes will be generated in the Primitive Blast Furnace. If above 1750K recipes for the Hot Ingot will be created along with the Vacuum Freezer Recipe to cool the ingot. Example: `.blastTemp(2750)`
-3. Sets the Gas Tier which determins what GAS EBF recipes will be generated. Example: `.gasTier(LOW)`
-4. Overrides the EBF's default behaviour for recipe durations.
-5. Overrides the EBF's default behaviour for EU/t.
-6. Used for creating a dust material. The haverst level and burn time can be specified in the brackets. Example: `.dust(2, 4000)`
-7. Creates a fluid pipe out of the material it is added to. The possible values are: Max Fluid Temperature, Throughput, Gas Proof, Acid Proof, Cyro Proof, Plasma Proof, Channels. Example: `.fluidPipeProperties(9620, 850, false, false, false, false, 1)`
+
+1. Sets the Blast Furnace Temperature of the material. If the temperature is below 1000K recipes will be generated in the Primitive Blast Furnace. If above 1750K recipes for the Hot Ingot will be created along with the Vacuum Freezer Recipe to cool the ingot. Example: `.blastTemp(2750)`
+
+2. Sets the Gas Tier which determins what GAS EBF recipes will be generated. Example: `.gasTier(LOW)`
+
+3. Overrides the EBF's default behaviour for recipe durations.
+
+4. Overrides the EBF's default behaviour for EU/t.
+
+5. Used for creating a dust material. The haverst level and burn time can be specified in the brackets. Example: `.dust(2, 4000)`
+
+6. Creates a fluid pipe out of the material it is added to. The possible values are: Max Fluid Temperature, Throughput, Gas Proof, Acid Proof, Cyro Proof, Plasma Proof,
+ Channels. Example: `.fluidPipeProperties(9620, 850, false, false, false, false, 1)`

@@ -16,4 +16,5 @@ StartupEvents.registry('block', event => {
         .material('metal')
 })
 ```
+
 1. The Energy Discount must be at least 1.
