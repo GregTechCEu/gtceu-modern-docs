@@ -56,7 +56,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 })
 ```
 
+
 ## Material Flags
+
 ```js 
 - GTMaterialFlags.BLAST_FURNACE_CALCITE_DOUBLE
 - GTMaterialFlags.BLAST_FURNACE_CALCITE_TRIPLE
