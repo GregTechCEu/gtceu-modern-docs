@@ -133,7 +133,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 - GTMaterialIconSet.get('') // (1)
 ```
 
-1. Used for specifying custom iconsets, for example `GTMatericalIconset.get('infinity')`.
+1. Used for specifying custom iconsets, for example `GTMatericalIconSet.get('infinity')`.
 
 
 ## Properties (WIP)
