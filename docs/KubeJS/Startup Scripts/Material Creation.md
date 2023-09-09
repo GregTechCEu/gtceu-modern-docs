@@ -15,7 +15,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 })
 ```
 
+
 ## Creating a Gem
+
 
 ```js title="gem.js"
 GTCEuStartupEvents.registry('gtceu:material', event => {
