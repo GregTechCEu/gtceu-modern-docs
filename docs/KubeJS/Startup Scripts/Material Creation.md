@@ -99,7 +99,9 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 - GTMaterialFlags.STICKY
 ```
 
+
 ## Icon Sets
+
 
 ```js 
 - GTMaterialIconSet.BRIGHT
