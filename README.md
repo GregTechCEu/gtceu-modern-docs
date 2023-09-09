@@ -5,12 +5,17 @@ This documentation project is built using [MkDocs](https://www.mkdocs.org/#).
 For an autmatically updating live preview in your browser, run `mkdocs serve`
 
 
-## Installing MkDocs & MkDocs-Material
+## Installing Required Dependencies
 
-To install the required dependencies, please refer to the following pages:
-- https://squidfunk.github.io/mkdocs-material/getting-started/#with-pip
+To install the required dependencies, please run `pip install -r requirements.txt`
+
+
+## Used MkDocs Plugins
+
+The following plugins for MkDocs are being used:
+
+- https://squidfunk.github.io/mkdocs-material/
 - https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
-
 
 ## Contributing
 
