@@ -3,16 +3,17 @@
 For consistency, please follow the following styleguide when submitting PRs.
 
 
-## Filenames & Basic Structure
+## Filenames & Basic Page Structure
 
 The file structure and basic page layout must follow these conventions: 
 
 - For each section, create a directory with a short, descriptive name in `Title Case`.
-- File names should only contain `A-Z`, `a-z`, `0-9`, `-` and `_`.  
-- If possible, please include an `index.md` file (with a custom title) for each section.
-- Every page of the docs must include a Markdown front matter block, containing _at least_
-its title, followed by two empty lines
-- Every page must include a level-1 heading
+- File names should only contain `A-Z`, `a-z`, `0-9`, `-` and `_` (no spaces).  
+- Directory names must use dashes (`-`) instead of spaces.
+- If you want to add a short description of what a section is about, include an `index.md` in its directory.
+- Every page of the docs must include a Markdown front matter block, containing _at least_ its title, followed by
+  two empty lines.
+- Every page must start with a level-1 heading. No other level-1 headings may be added.
 
 Note that the page name/title must be as short and descriptive as possible, as it's displayed in the navigation area.  
 You can, however, choose a longer version for the page _header_:
@@ -49,18 +50,28 @@ Please use the following formatting rules for standard markdown:
 - Each code block must include a language whenever possible, so that syntax highlighting is applied correctly
 
 
+## Index Pages
+
+Only use index pages for a short description of what the current section is about.
+
+Do not include any important documentation on index pages!  
+You may link to certain relevant pages (either inside the current section, or in other sections) though. 
+
+
 ## Admonitions
 
 Use [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) in the following situations:
 
-- If you want to provide additional info about a feature, use the an `info` admonition.
+- If you want to provide potentially useful, additional info about a feature, use an `info` admonition.
+- For "see also" references, use an `info inline end` admonition.
 - For tips / recommendations on _when_ or _how_ to use a feature, use he `tip` admonition type.
   - For general notes on _when_ or _how_ to use a specific feature (in development related docs), use the `note` type.
 - For warning about possible bugs or unwanted behavior, use the `warning` type.
 - If a feature may result in destructive actions in certain scenarios, use the `danger` type.
 - For providing code examples, use the `example` type.  
   - **Always** provide a title for code examples, even if it's simply "Example usage".  
-  - Use collapsible blocks (`??? example "my example title"` instea of `!!!`) for code examples.
+  - Use collapsible blocks (`??? example "my example title"` instead of `!!!`) for code examples.
+- For pages or sections that are not documented yet, use `!!! failure "Not yet documented"`
 
 We suggest adding an empty line after the title for consistency, like in the following example.  
 It is **strongly recommended** to include a custom, descriptive title for your admonition, if possible.
