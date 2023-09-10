@@ -56,5 +56,7 @@ This is therefore, where [TPS](#tps) impact becomes relevant. In general, use
 
 ## TPS
 
-Short for "ticks per second".  
-Should stay at exactly 20. See [Optimization](Optimization.md) for techniques on how to reduce performance impact.
+Short for "ticks per second". Should stay at exactly 20.
+
+See [Tick Updates](General-Topics/Tick%20Updates.md) and [Optimization](General-Topics/Optimization.md) for techniques
+on how to reduce performance impact.
