@@ -1,6 +1,5 @@
 nav:
   - 'Home': 'index.md'
   - 'Gameplay'
-  - 'Modpack Authors':
-    - 'KubeJS'
+  - 'Modpack Authors': Modpacks
   - 'Developers': 'Development'
