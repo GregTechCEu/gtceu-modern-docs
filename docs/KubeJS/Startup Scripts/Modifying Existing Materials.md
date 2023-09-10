@@ -1,3 +1,0 @@
----
-title: Modifying Existing Materials
----
