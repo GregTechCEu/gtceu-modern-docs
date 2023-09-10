@@ -3,16 +3,17 @@
 For consistency, please follow the following styleguide when submitting PRs.
 
 
-## Filenames & Basic Structure
+## Filenames & Basic Page Structure
 
 The file structure and basic page layout must follow these conventions: 
 
 - For each section, create a directory with a short, descriptive name in `Title Case`.
-- File names should only contain `A-Z`, `a-z`, `0-9`, `-` and `_`.  
-- If possible, please include an `index.md` file (with a custom title) for each section.
-- Every page of the docs must include a Markdown front matter block, containing _at least_
-its title, followed by two empty lines
-- Every page must include a level-1 heading
+- File names should only contain `A-Z`, `a-z`, `0-9`, `-` and `_` (no spaces).  
+- Directory names must use dashes (`-`) instead of spaces.
+- If you want to add a short description of what a section is about, include an `index.md` in its directory.
+- Every page of the docs must include a Markdown front matter block, containing _at least_ its title, followed by
+  two empty lines.
+- Every page must start with a level-1 heading. No other level-1 headings may be added.
 
 Note that the page name/title must be as short and descriptive as possible, as it's displayed in the navigation area.  
 You can, however, choose a longer version for the page _header_:
