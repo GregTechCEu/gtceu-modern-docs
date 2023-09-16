@@ -70,7 +70,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 ```
 
 
-# Recipes
+## Recipes
 
 ```js title="greenhouse_recipes.js"
 ServerEvents.recipes(event => {
