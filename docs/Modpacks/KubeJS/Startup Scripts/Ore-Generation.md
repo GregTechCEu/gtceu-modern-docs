@@ -2,7 +2,10 @@
 title: Ore Generation
 ---
 
-##Adding a Custom Ore Vein
+# Ore Generation
+
+
+## Adding a Custom Ore Vein
 
 ```js title="piss_vein.js"
 GTCEuServerEvents.oreVeins(event => {
