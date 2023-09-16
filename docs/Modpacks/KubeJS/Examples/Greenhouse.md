@@ -3,9 +3,10 @@ title: "Greenhouse"
 ---
 
 
-## Greenhouse Multiblock By: Drack.ion
+# Greenhouse Multiblock By: Drack.ion
 
-# Recipe Type
+
+## Recipe Type
 
 ```js title="greenhouse_recipe_type.js"
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
