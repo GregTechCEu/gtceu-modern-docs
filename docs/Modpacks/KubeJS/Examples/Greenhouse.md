@@ -82,136 +82,97 @@ ServerEvents.recipes(event => {
             C: '#forge:circuits/mv',
             S: 'gtceu:solid_machine_casing'
         }).id('gtceu:shaped/greenhouse')
-    //Tree Recipes
-    function GHTree(sapling, log, sap, id, boosted, boosted_rubber, rubber) {
+    //Greenhouse Recipes
+	function Greenhouse(id, input, fluid, output, boosted) {
 		if (boosted) {
-			event.recipes.gtceu.greenhouse(`gtceu:${id}_sapling_boosted`)
+			event.recipes.gtceu.greenhouse(id)
 				.circuit(2)
-				.notConsumable(InputItem.of(sapling))
+				.notConsumable(InputItem.of(input))
 				.itemInputs('4x gtceu:fertilizer')
-				.inputFluids(Fluid.of('minecraft:water', 1000))
-				.itemOutputs(log, log, sap)
+				.inputFluids(Fluid.of('minecraft:water', fluid))
+				.itemOutputs(output)
 				.duration(320)
-				.EUt(48)
-		} else if (boosted_rubber) {
-			event.recipes.gtceu.greenhouse(`gtceu:rubber_sapling_boosted`)
-				.circuit(2)
-				.notConsumable(InputItem.of('gtceu:rubber_sapling'))
-				.itemInputs('4x gtceu:fertilizer')
-				.inputFluids(Fluid.of('minecraft:water', 1000))
-				.itemOutputs('64x gtceu:rubber_log', '16x gtceu:sticky_resin', '4x gtceu:rubber_sapling')
-				.duration(320)
-				.EUt(48)
-		} else if (rubber) {
-			event.recipes.gtceu.greenhouse(`gtceu:ruber_sapling`)
-				.circuit(1)
-				.chance(0)
-				.notConsumable(InputItem.of('gtceu:rubber_sapling'))
-				.chance(1)
-				.inputFluids(Fluid.of('minecraft:water', 1000))
-				.itemOutputs('32x gtceu:rubber_log', '8x gtceu:sticky_resin', '4x gtceu:rubber_sapling')
-				.duration(640)
-				.EUt(48)
-		} else {
-			event.recipes.gtceu.greenhouse(`gtceu:${id}_sapling`)
-				.circuit(1)
-				.notConsumable(InputItem.of(sapling))
-				.inputFluids(Fluid.of('minecraft:water', 1000))
-				.itemOutputs(log, sap)
-				.duration(640)
-				.EUt(48)
-		}
+				.EUt(MV)
+			} else {
+				event.recipes.gtceu.greenhouse(id)
+					.circuit(1)
+					.notConsumable(InputItem.of(input))
+					.inputFluids(Fluid.of('minecraft:water', fluid))
+					.itemOutputs(output)
+					.duration(640)
+					.EUt(MV)
+			}
 	}
-	//Rubber
-		GHTree(null, null, null, null, false, false, true)
-		GHTree(null, null, null, null, false, true, false)
-	//Oak
-		GHTree('minecraft:oak_sapling', '64x minecraft:oak_log', '4x minecraft:oak_sapling', 'oak', false, false, false)
-		GHTree('minecraft:oak_sapling', '64x minecraft:oak_log', '4x minecraft:oak_sapling', 'oak', true, false, false)
-	//Dark Oak
-		GHTree('minecraft:dark_oak_sapling', '64x minecraft:dark_oak_log', '4x minecraft:dark_oak_sapling', 'dark_oak', false, false, false)
-		GHTree('minecraft:dark_oak_sapling', '64x minecraft:dark_oak_log', '4x minecraft:dark_oak_sapling', 'dark_oak', true, false, false)
-	//Spruce
-		GHTree('minecraft:spruce_sapling', '64x minecraft:spruce_log', '4x minecraft:spruce_sapling', 'spruce', false, false, false)
-		GHTree('minecraft:spruce_sapling', '64x minecraft:spruce_log', '4x minecraft:spruce_sapling', 'spruce', true, false, false)
-	//Birch
-		GHTree('minecraft:birch_sapling', '64x minecraft:birch_log', '4x minecraft:birch_sapling', 'birch', false, false, false)
-		GHTree('minecraft:birch_sapling', '64x minecraft:birch_log', '4x minecraft:birch_sapling', 'birch', true, false, false)
-	//Acacia
-		GHTree('minecraft:acacia_sapling', '64x minecraft:acacia_log', '4x minecraft:acacia_sapling', 'acacia', false, false, false)
-		GHTree('minecraft:acacia_sapling', '64x minecraft:acacia_log', '4x minecraft:acacia_sapling', 'acacia', true, false, false)
-	//Jungle
-		GHTree('minecraft:jungle_sapling', '64x minecraft:jungle_log', '4x minecraft:jungle_sapling', 'jungle', false, false, false)
-		GHTree('minecraft:jungle_sapling', '64x minecraft:jungle_log', '4x minecraft:jungle_sapling', 'jungle', true, false, false)
-	//Azalea
-		GHTree('minecraft:azalea', '64x minecraft:oak_log', '4x minecraft:azalea', 'azalea', false, false, false)
-		GHTree('minecraft:azalea', '64x minecraft:oak_log', '4x minecraft:azalea', 'azalea', true, false, false)
-	//Flowering Azalea
-		GHTree('minecraft:flowering_azalea', '64x minecraft:oak_log', '4x minecraft:flowering_azalea', 'flowering_azalea', false, false, false)
-		GHTree('minecraft:flowering_azalea', '64x minecraft:oak_log', '4x minecraft:flowering_azalea', 'flowering_azalea', true, false, false)
-	//Mangrove
-		GHTree('minecraft:mangrove_propagule', '64x minecraft:mangrove_log', '4x minecraft:mangrove_propagule', 'mangrove', false, false, false)
-		GHTree('minecraft:mangrove_propagule', '64x minecraft:mangrove_log', '4x minecraft:mangrove_propagule', 'mangrove', true, false, false)
-
-    //Crop Recipes
-    function GHPlant(seed, crop, water, id, boosted) {
-		if (boosted) {
-			event.recipes.gtceu.greenhouse(`gregicskies:${id}_boosted`)
-				.circuit(2)
-				.notConsumable(InputItem.of(seed))
-				.itemInputs('4x gtceu:fertilizer')
-				.inputFluids(Fluid.of('minecraft:water', water))
-				.itemOutputs(crop)
-				.duration(320)
-				.EUt(48)
-		} else {
-			event.recipes.gtceu.greenhouse(`gregicskies:${id}`)
-				.circuit(1)
-				.notConsumable(InputItem.of(seed))
-				.inputFluids(Fluid.of('minecraft:water', water))
-				.itemOutputs(crop)
-				.duration(320)
-				.EUt(48)
-		}
-	}
-	//Sugarcane
-		GHPlant('minecraft:sugar_cane', '48x minecraft:sugar_cane', 1500, 'sugar_cane', true)
-		GHPlant('minecraft:sugar_cane', '24x minecraft:sugar_cane', 1500, 'sugar_cane', false)
-	//Kelp
-		GHPlant('minecraft:kelp', '48x minecraft:kelp', 2000, 'kelp', true)
-		GHPlant('minecraft:kelp', '24x minecraft:kelp', 2000, 'kelp', false)
-	//Bamboo
-		GHPlant('minecraft:bamboo', '48x minecraft:bamboo', 1000, 'bamboo', true)
-		GHPlant('minecraft:bamboo', '24x minecraft:bamboo', 1000, 'bamboo', false)
-	//Cactus
-		GHPlant('minecraft:cactus', '48x minecraft:cactus', 1000, 'cactus', true)
-		GHPlant('minecraft:cactus', '24x minecraft:cactus', 1000, 'cactus', false)
-	//Wheat
-		GHPlant('minecraft:wheat_seeds', '48x minecraft:wheat', 1000, 'wheat', true)
-		GHPlant('minecraft:wheat_seeds', '24x minecraft:wheat', 1000, 'wheat', false)
-	//Carrot
-		GHPlant('minecraft:carrot', '48x minecraft:carrot', 1000, 'carrot', true)
-		GHPlant('minecraft:carrot', '24x minecraft:carrot', 1000, 'carrot', false)
-	//Potato
-		GHPlant('minecraft:potato', '48x minecraft:potato', 1000, 'potato', true)
-		GHPlant('minecraft:potato', '24x minecraft:potato', 1000, 'potato', false)
-	//Beetroot
-		GHPlant('minecraft:beetroot_seeds', '48x minecraft:beetroot', 1000, 'beetroot', true)
-		GHPlant('minecraft:beetroot_seeds', '24x minecraft:beetroot', 1000, 'beetroot', false)
-	//Melon
-		GHPlant('minecraft:melon_seeds', '24x minecraft:melon', 1000, 'melon', true)
-		GHPlant('minecraft:melon_seeds', '12x minecraft:melon', 1000, 'melon', false)
-	//Pumpkin
-		GHPlant('minecraft:pumpkin_seeds', '24x minecraft:pumpkin', 1000, 'pumpkin', true)
-		GHPlant('minecraft:pumpkin_seeds', '12x minecraft:pumpkin', 1000, 'pumpkin', false)
-	//Netherwart
-		GHPlant('minecraft:nether_wart', '24x minecraft:nether_wart', 1000, 'nether_wart', true)
-		GHPlant('minecraft:nether_wart', '12x minecraft:nether_wart', 1000, 'nether_wart', false)
-	//Red Mushroom
-		GHPlant('minecraft:red_mushroom', '24x minecraft:red_mushroom', 1000, 'red_mushroom', true)
-		GHPlant('minecraft:red_mushroom', '12x minecraft:red_mushroom', 1000, 'red_mushroom', false)
-	//Brown Mushroom
-		GHPlant('minecraft:brown_mushroom', '24x minecraft:brown_mushroom', 1000, 'brown_mushroom', true)
-		GHPlant('minecraft:brown_mushroom', '12x minecraft:brown_mushroom', 1000, 'brown_mushroom', false)
+	//Trees
+		//Rubber
+			Greenhouse('rubber_sapling', 'gtceu:rubber_sapling', 1000, ['32x gtceu:rubber_log', '8x gtceu:sticky_resin', '4x gtceu:rubber_sapling'], false)
+			Greenhouse('rubber_sapling_boosted', 'gtceu:rubber_sapling', 1000, ['64x gtceu:rubber_log', '16x gtceu:sticky_resin', '4x gtceu:rubber_sapling'], true)
+		//Oak
+			Greenhouse('oak_sapling', 'minecraft:oak_sapling', 1000, ['64x minecraft:oak_log', '4x minecraft:oak_sapling'], false)
+			Greenhouse('oak_sapling_boosted', 'minecraft:oak_sapling', 1000, ['64x minecraft:oak_log', '64x minecraft:oak_log', '4x minecraft:oak_sapling'], true)
+		//Dark Oak
+			Greenhouse('dark_oak_sapling', 'minecraft:dark_oak_sapling', 1000, ['64x minecraft:dark_oak_log', '4x minecraft:dark_oak_sapling'], false)
+			Greenhouse('dark_oak_sapling_boosted', 'minecraft:dark_oak_sapling', 1000, ['64x minecraft:dark_oak_log', '64x minecraft:dark_oak_log', '4x minecraft:dark_oak_sapling'], true)
+		//Spruce
+			Greenhouse('spruce_sapling', 'minecraft:spruce_sapling', 1000, ['64x minecraft:spruce_log', '4x minecraft:spruce_sapling'], false)
+			Greenhouse('spruce_sapling_boosted', 'minecraft:spruce_sapling', 1000, ['64x minecraft:spruce_log', '64x minecraft:spruce_log', '4x minecraft:spruce_sapling'], true)
+		//Birch
+			Greenhouse('birch_sapling', 'minecraft:birch_sapling', 1000, ['64x minecraft:birch_log', '4x minecraft:birch_sapling'], false)
+			Greenhouse('birch_sapling_boosted', 'minecraft:birch_sapling', 1000, ['64x minecraft:birch_log', '64x minecraft:birch_log', '4x minecraft:birch_sapling'], true)
+		//Acacia
+			Greenhouse('acacia_sapling', 'minecraft:acacia_sapling', 1000, ['64x minecraft:acacia_log', '4x minecraft:acacia_sapling'], false)
+			Greenhouse('acacia_sapling_boosted', 'minecraft:acacia_sapling', 1000, ['64x minecraft:acacia_log', '64x minecraft:acacia_log', '4x minecraft:acacia_sapling'], true)
+		//Jungle
+			Greenhouse('jungle_sapling', 'minecraft:jungle_sapling', 1000, ['64x minecraft:jungle_log', '4x minecraft:jungle_sapling'], false)
+			Greenhouse('jungle_sapling_boosted', 'minecraft:jungle_sapling', 1000, ['64x minecraft:jungle_log', '64x minecraft:jungle_log', '4x minecraft:jungle_sapling'], true)
+		//Azalea
+			Greenhouse('azalea_sapling', 'minecraft:azalea', 1000, ['64x minecraft:oak_log', '4x minecraft:azalea'], false)
+			Greenhouse('azalea_boosted', 'minecraft:azalea', 1000, ['64x minecraft:oak_log', '64x minecraft:oak_log', '4x minecraft:azalea'], true)
+		//Flowering Azalea
+			Greenhouse('flowering_azalea', 'minecraft:flowering_azalea', 1000, ['64x minecraft:oak_log', '4x minecraft:flowering_azalea'], false)
+			Greenhouse('flowering_azalea_boosted', 'minecraft:flowering_azalea', 1000, ['64x minecraft:oak_log', '64x minecraft:oak_log', '4x minecraft:flowering_azalea'], true)
+		//Mangrove
+			Greenhouse('mangrove_propagule', 'minecraft:mangrove_propagule', 1000, ['64x minecraft:mangrove_log', '4x minecraft:mangrove_propagule'], false)
+			Greenhouse('mangrove_propagule_boosted', 'minecraft:mangrove_propagule', 1000, ['64x minecraft:mangrove_log', '64x minecraft:mangrove_log', '4x minecraft:mangrove_propagule'], true)
+	//Crops
+		//Sugarcane
+			Greenhouse('sugar_cane', 'minecraft:sugar_cane', 1000, '48x minecraft:sugar_cane', false)
+			Greenhouse('sugar_cane_boosted', 'minecraft:sugar_cane', 1000, '24x minecraft:sugar_cane', true)
+		//Kelp
+			Greenhouse('kelp', 'minecraft:kelp', 2000, '48x minecraft:kelp', false)
+			Greenhouse('kelp_boosted', 'minecraft:kelp', 2000, '24x minecraft:kelp', true)
+		//Bamboo
+			Greenhouse('bamboo', 'minecraft:bamboo', 1000, '48x minecraft:bamboo', false)
+			Greenhouse('bamboo_boosted', 'minecraft:bamboo', 1000, '24x minecraft:bamboo', true)
+		//Cactus
+			Greenhouse('cactus', 'minecraft:cactus', 1000, '48x minecraft:cactus', false)
+			Greenhouse('cactus_boosted', 'minecraft:cactus', 1000, '24x minecraft:cactus', true)
+		//Wheat
+			Greenhouse('wheat', 'minecraft:wheat_seeds', 1000, '48x minecraft:wheat', false)
+			Greenhouse('wheat_boosted', 'minecraft:wheat_seeds', 1000, '24x minecraft:wheat', true)
+		//Carrot
+			Greenhouse('carrot', 'minecraft:carrot', 1000, '48x minecraft:carrot', false)
+			Greenhouse('carrot_boosted', 'minecraft:carrot', 1000, '24x minecraft:carrot', true)
+		//Potato
+			Greenhouse('potato', 'minecraft:potato', 1000, '48x minecraft:potato', false)
+			Greenhouse('potato_boosted', 'minecraft:potato', 1000, '24x minecraft:potato', true)
+		//Beetroot
+			Greenhouse('beetroot', 'minecraft:beetroot_seeds', 1000, '48x minecraft:beetroot', false)
+			Greenhouse('beetroot_boosted', 'minecraft:beetroot_seeds', 1000, '24x minecraft:beetroot', true)
+		//Mellon
+			Greenhouse('melon', 'minecraft:melon_seeds', 1000, '24x minecraft:melon', false)
+			Greenhouse('melon_boosted', 'minecraft:melon_seeds', 1000, '12x minecraft:melon', true)
+		//Pumpkin
+			Greenhouse('pumpkin', 'minecraft:pumpkin_seeds', 1000, '24x minecraft:pumpkin', false)
+			Greenhouse('pumpkin_boosted', 'minecraft:pumpkin_seeds', 1000, '12x minecraft:pumpkin', true)
+		//Nether Wart
+			Greenhouse('nether_wart', 'minecraft:nether_wart', 1000, '24x minecraft:nether_wart', false)
+			Greenhouse('nether_wart_boosted', 'minecraft:nether_wart', 1000, '12x minecraft:nether_wart', true)
+		//Red Mushroom
+			Greenhouse('red_mushroom', 'minecraft:red_mushroom', 1000, '24x minecraft:red_mushroom', false)
+			Greenhouse('red_mushroom_boosted', 'minecraft:red_mushroom', 1000, '12x minecraft:red_mushroom', true)
+		//Brown Mushroom
+			Greenhouse('brown_mushroom', 'minecraft:brown_mushroom', 1000, '24x minecraft:brown_mushroom', false)
+			Greenhouse('brown_mushroom_boosted', 'minecraft:brown_mushroom', 1000, '12x minecraft:brown_mushroom', true)
 })
 ```
