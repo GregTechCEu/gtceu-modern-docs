@@ -60,7 +60,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 ```
 
 
-# Lang
+## Lang
 
 ```json title="en_us.json"
 {
