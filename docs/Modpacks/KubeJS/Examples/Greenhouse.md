@@ -20,7 +20,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 ```
 
 
-# Multiblock
+## Multiblock
 
 ```js title="greenhouse_multiblock.js"
 GTCEuStartupEvents.registry('gtceu:machine', event => {
