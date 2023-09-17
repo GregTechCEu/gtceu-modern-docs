@@ -50,7 +50,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 			.where('I', Predicates.blocks('glowstone'))
 			.where('L', Predicates.blocks(GTBlocks.CASING_GRATE.get()))
 			.where('C', Predicates.blocks(GTBlocks.CASING_STEEL_SOLID.get())
-				.or(Predicates.autoAbilities(definition.getRecipeType())))
+				.or(Predicates.autoAbilities(definition.getRecipeTypes())))
 			.where('O', Predicates.abilities(PartAbility.MUFFLER).setExactLimit(1))
             .where('N', Predicates.abilities(PartAbility.MAINTENANCE))
 			.where('#', Predicates.air())
