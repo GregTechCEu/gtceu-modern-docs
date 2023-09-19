@@ -7,9 +7,9 @@ title: Ore Generation
 
 ## Adding a Custom Ore Vein
 
-```js title="piss_vein.js"
+```js title="custom_vein.js"
 GTCEuServerEvents.oreVeins(event => {
-    event.add("kubejs:piss_vein", vein => {
+    event.add("kubejs:custom_vein", vein => {
         vein.clusterSize = 40
         vein.weight = 200
         vein.layer = "deepslate"
