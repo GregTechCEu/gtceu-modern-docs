@@ -164,55 +164,55 @@ ServerEvents.recipes(event => {
     ////// Crops //////
     
     // Sugarcane
-    Greenhouse('sugar_cane', 'minecraft:sugar_cane', 1000, '48x minecraft:sugar_cane', false)
-    Greenhouse('sugar_cane_boosted', 'minecraft:sugar_cane', 1000, '24x minecraft:sugar_cane', true)
+    Greenhouse('sugar_cane', 'minecraft:sugar_cane', 1000, '24x minecraft:sugar_cane', false)
+    Greenhouse('sugar_cane_boosted', 'minecraft:sugar_cane', 1000, '48x minecraft:sugar_cane', true)
     
     // Kelp
-    Greenhouse('kelp', 'minecraft:kelp', 2000, '48x minecraft:kelp', false)
-    Greenhouse('kelp_boosted', 'minecraft:kelp', 2000, '24x minecraft:kelp', true)
+    Greenhouse('kelp', 'minecraft:kelp', 2000, '24x minecraft:kelp', false)
+    Greenhouse('kelp_boosted', 'minecraft:kelp', 2000, '48x minecraft:kelp', true)
     
     // Bamboo
-    Greenhouse('bamboo', 'minecraft:bamboo', 1000, '48x minecraft:bamboo', false)
-    Greenhouse('bamboo_boosted', 'minecraft:bamboo', 1000, '24x minecraft:bamboo', true)
+    Greenhouse('bamboo', 'minecraft:bamboo', 1000, '24x minecraft:bamboo', false)
+    Greenhouse('bamboo_boosted', 'minecraft:bamboo', 1000, '48x minecraft:bamboo', true)
     
     // Cactus
-    Greenhouse('cactus', 'minecraft:cactus', 1000, '48x minecraft:cactus', false)
-    Greenhouse('cactus_boosted', 'minecraft:cactus', 1000, '24x minecraft:cactus', true)
+    Greenhouse('cactus', 'minecraft:cactus', 1000, '24x minecraft:cactus', false)
+    Greenhouse('cactus_boosted', 'minecraft:cactus', 1000, '48x minecraft:cactus', true)
     
     // Wheat
-    Greenhouse('wheat', 'minecraft:wheat_seeds', 1000, '48x minecraft:wheat', false)
-    Greenhouse('wheat_boosted', 'minecraft:wheat_seeds', 1000, '24x minecraft:wheat', true)
+    Greenhouse('wheat', 'minecraft:wheat_seeds', 1000, '24x minecraft:wheat', false)
+    Greenhouse('wheat_boosted', 'minecraft:wheat_seeds', 1000, '48x minecraft:wheat', true)
     
     // Carrot
-    Greenhouse('carrot', 'minecraft:carrot', 1000, '48x minecraft:carrot', false)
-    Greenhouse('carrot_boosted', 'minecraft:carrot', 1000, '24x minecraft:carrot', true)
+    Greenhouse('carrot', 'minecraft:carrot', 1000, '24x minecraft:carrot', false)
+    Greenhouse('carrot_boosted', 'minecraft:carrot', 1000, '48x minecraft:carrot', true)
     
     // Potato
-    Greenhouse('potato', 'minecraft:potato', 1000, '48x minecraft:potato', false)
-    Greenhouse('potato_boosted', 'minecraft:potato', 1000, '24x minecraft:potato', true)
+    Greenhouse('potato', 'minecraft:potato', 1000, '24x minecraft:potato', false)
+    Greenhouse('potato_boosted', 'minecraft:potato', 1000, '48x minecraft:potato', true)
     
     // Beetroot
-    Greenhouse('beetroot', 'minecraft:beetroot_seeds', 1000, '48x minecraft:beetroot', false)
-    Greenhouse('beetroot_boosted', 'minecraft:beetroot_seeds', 1000, '24x minecraft:beetroot', true)
+    Greenhouse('beetroot', 'minecraft:beetroot_seeds', 1000, '24x minecraft:beetroot', false)
+    Greenhouse('beetroot_boosted', 'minecraft:beetroot_seeds', 1000, '48x minecraft:beetroot', true)
     
     // Mellon
-    Greenhouse('melon', 'minecraft:melon_seeds', 1000, '24x minecraft:melon', false)
-    Greenhouse('melon_boosted', 'minecraft:melon_seeds', 1000, '12x minecraft:melon', true)
+    Greenhouse('melon', 'minecraft:melon_seeds', 1000, '12x minecraft:melon', false)
+    Greenhouse('melon_boosted', 'minecraft:melon_seeds', 1000, '24x minecraft:melon', true)
     
     // Pumpkin
-    Greenhouse('pumpkin', 'minecraft:pumpkin_seeds', 1000, '24x minecraft:pumpkin', false)
-    Greenhouse('pumpkin_boosted', 'minecraft:pumpkin_seeds', 1000, '12x minecraft:pumpkin', true)
+    Greenhouse('pumpkin', 'minecraft:pumpkin_seeds', 1000, '12x minecraft:pumpkin', false)
+    Greenhouse('pumpkin_boosted', 'minecraft:pumpkin_seeds', 1000, '24x minecraft:pumpkin', true)
     
     // Nether Wart
-    Greenhouse('nether_wart', 'minecraft:nether_wart', 1000, '24x minecraft:nether_wart', false)
-    Greenhouse('nether_wart_boosted', 'minecraft:nether_wart', 1000, '12x minecraft:nether_wart', true)
+    Greenhouse('nether_wart', 'minecraft:nether_wart', 1000, '12x minecraft:nether_wart', false)
+    Greenhouse('nether_wart_boosted', 'minecraft:nether_wart', 1000, '24x minecraft:nether_wart', true)
     
     // Red Mushroom
-    Greenhouse('red_mushroom', 'minecraft:red_mushroom', 1000, '24x minecraft:red_mushroom', false)
-    Greenhouse('red_mushroom_boosted', 'minecraft:red_mushroom', 1000, '12x minecraft:red_mushroom', true)
+    Greenhouse('red_mushroom', 'minecraft:red_mushroom', 1000, '12x minecraft:red_mushroom', false)
+    Greenhouse('red_mushroom_boosted', 'minecraft:red_mushroom', 1000, '24x minecraft:red_mushroom', true)
     
     // Brown Mushroom
-    Greenhouse('brown_mushroom', 'minecraft:brown_mushroom', 1000, '24x minecraft:brown_mushroom', false)
-    Greenhouse('brown_mushroom_boosted', 'minecraft:brown_mushroom', 1000, '12x minecraft:brown_mushroom', true)
+    Greenhouse('brown_mushroom', 'minecraft:brown_mushroom', 1000, '12x minecraft:brown_mushroom', false)
+    Greenhouse('brown_mushroom_boosted', 'minecraft:brown_mushroom', 1000, '24x minecraft:brown_mushroom', true)
 })
 ```
