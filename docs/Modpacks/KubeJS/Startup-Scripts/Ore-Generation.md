@@ -95,7 +95,8 @@ GTCEuServerEvents.oreVeins(event => {
 })
 ```
 
-1. For this to work you must first create the new world gen layer of `Air`.
+1. For this to work you must first create the new world gen layer of `air`.  
+   _See [Creating a New World Gen Layer](#creating-a-new-world-gen-layer)_
 
 
 ## Creating a New World Gen Layer
