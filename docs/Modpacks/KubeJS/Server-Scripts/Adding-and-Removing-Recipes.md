@@ -1,5 +1,5 @@
 ---
-title: Adding & Removing Recipes
+title: "Adding & Removing Recipes"
 ---
 
 
