@@ -70,7 +70,8 @@ Use [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admoniti
 - If a feature may result in destructive actions in certain scenarios, use the `danger` type.
 - For providing code examples, use the `example` type.  
   - **Always** provide a title for code examples, even if it's simply "Example usage".  
-  - Use collapsible blocks (`??? example "my example title"` instead of `!!!`) for code examples.
+  - Use collapsible blocks (`??? example "my example title"` instead of `!!!`) for code examples where possible.  
+    _In some situations this might not be as useful as using a non-collapsible block. Just fall back to `!!!` in these cases._
 - For pages or sections that are not documented yet, use `!!! failure "Not yet documented"`
 
 We suggest adding an empty line after the title for consistency, like in the following example.  

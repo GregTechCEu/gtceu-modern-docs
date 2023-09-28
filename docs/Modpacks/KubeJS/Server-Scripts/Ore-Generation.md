@@ -2,6 +2,7 @@
 title: Ore Generation
 ---
 
+
 # Ore Generation
 
 
@@ -10,12 +11,15 @@ title: Ore Generation
 ```js title="custom_vein.js"
 GTCEuServerEvents.oreVeins(event => {
     event.add("kubejs:custom_vein", vein => {
-        vein.clusterSize = 40
-        vein.weight = 200
-        vein.layer = "deepslate"
-        vein.density = 0.25
+        vein.clusterSize(40)
+        vein.weight(200)
+        vein.layer("deepslate")
+        vein.density(0.25)
+
         vein.addSpawnDimension("minecraft:overworld")
-        vein.heightRange = {
+        vein.addSpawnBiome("#minecraft:is_overworld")
+
+        vein.heightRange({
             height: {
                 type: "uniform",
                 min_inclusive: {
@@ -25,10 +29,9 @@ GTCEuServerEvents.oreVeins(event => {
                   absolute: 20
                 }
             }
-        }
-        vein.discardChanceOnAirExposure = 0
-        vein.addSpawnBiome("#minecraft:is_overworld")
-        vein.generator = {
+        })
+        vein.discardChanceOnAirExposure(0)
+        vein.generator({
             type: "gtceu:layer",
             layer_patterns: [
                 [
@@ -52,7 +55,7 @@ GTCEuServerEvents.oreVeins(event => {
                     }
                 ]
             ]
-        }
+        })
     })
 })
 ```
@@ -89,7 +92,7 @@ const $GTOreFeatureEntry = Java.loadClass('com.gregtechceu.gtceu.api.data.worldg
 GTCEuServerEvents.oreVeins(event => {
     $GTOreFeatureEntry.ALL.keySet().forEach(veinId => {
         event.modify(veinId, vein => {
-            vein.layer = 'air'
+            vein.layer('air')
         })
     }) //(1)
 })
