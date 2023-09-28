@@ -8,7 +8,6 @@ title: Flags
 Using material flags, you can specify several properties of each material, which
 can influence how the material behaves, as well as which items are generated for it.
 
-
 !!! example "Using material Flags"
     ```js
     GTCEuStartupEvents.registry('gtceu:material', event => {

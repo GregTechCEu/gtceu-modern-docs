@@ -18,7 +18,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 ## Creating a Gem
 
-
 ```js title="gem.js"
 GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create('purple_coal')
@@ -32,7 +31,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 ## Creating a Dust
 
-
 ```js title="dust.js"
 GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create('mysterious_dust')
@@ -45,7 +43,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
 
 ## Creating a Fluid
-
 
 ```js title="fluid.js"
 GTCEuStartupEvents.registry('gtceu:material', event => {
