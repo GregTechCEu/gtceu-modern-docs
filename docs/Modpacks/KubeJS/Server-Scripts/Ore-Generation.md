@@ -70,6 +70,17 @@ GTCEuServerEvents.oreVeins(event => {
 ```
 
 
+??? example "Removing all ore veins"
+    If you want to remove **all** predefined ore veins (for example if you want to completely change ore generation
+    in your modpack), you can use the following code:
+
+    ```js
+    GTCEuServerEvents.oreVeins(event => {
+        GTRegistries.ORE_VEINS.keys().forEach(id => event.remove(id))
+    })
+    ```
+
+
 ## Modifying Contents of an Existing Vein
 
 ```js title="ore_vein_modify_contents.js"
