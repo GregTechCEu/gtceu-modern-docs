@@ -21,6 +21,15 @@ Continue reading for a few important places you may want to check.
 If you're not sure what methods and fields are available on one of our builders, you can find all of them in this directory.
 
 
+## Material Builder
+
+!!! link "Material Builder"
+    [`common/src/main/java/com/gregtechceu/gtceu/api/data/chemical/material/Material.java`](https://github.com/GregTechCEu/GregTech-Modern/blob/1.20.1/common/src/main/java/com/gregtechceu/gtceu/api/data/chemical/material/Material.java)
+
+The material builder is not located in the KJS integration package.  
+Please reference the nested `Material.Builder` class instead.
+
+
 ## Bindings & Type Wrappers
 
 !!! link "GregTechKubeJSPlugin"
