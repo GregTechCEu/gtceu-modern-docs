@@ -73,6 +73,7 @@ Use [admonitions](https://squidfunk.github.io/mkdocs-material/reference/admoniti
   - Use collapsible blocks (`??? example "my example title"` instead of `!!!`) for code examples where possible.  
     _In some situations this might not be as useful as using a non-collapsible block. Just fall back to `!!!` in these cases._
 - For pages or sections that are not documented yet, use `!!! failure "Not yet documented"`
+- For links, use the (custom) `link` type.
 
 We suggest adding an empty line after the title for consistency, like in the following example.  
 It is **strongly recommended** to include a custom, descriptive title for your admonition, if possible.
