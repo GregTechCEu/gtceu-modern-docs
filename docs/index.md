@@ -20,4 +20,4 @@ to modern Minecraft versions.
 ## Want to Contribute?
 
 If you want to contribute to this documentation site, feel free to open a pull request on
-[its GitHub repository](https://github.com/mikerooni/gtceu-modern-docs).
+[its GitHub repository](https://github.com/GregTechCEu/gtceu-modern-docs).
