@@ -1,11 +1,13 @@
 ---
-title: KubeJS Integration
+title: Modpack Creation
 ---
 
 
-# KubeJS Integration
+# Modpack Creation
 
 GTCEu Modern offers extensive integration with KubeJS for customizability.  
+Most of our tools for modpack creators revolve around this KubeJS API.
+
 Refer to this section for information on how to use it, as well as for examples.
 
 
