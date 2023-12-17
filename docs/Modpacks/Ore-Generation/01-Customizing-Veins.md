@@ -23,7 +23,7 @@ GTCEuServerEvents.oreVeins(event => {
         // Define where the vein can generate
         vein.layer("deepslate") // [*] (5)
         vein.dimensions("minecraft:overworld") // (6)
-        vein.biomes("#minecraft:is_overworld") // (7)
+        vein.biome("#minecraft:is_overworld") // (7)
 
         // Define a height range:
         // You must choose EXACTLY ONE of these options! [*]
@@ -51,12 +51,10 @@ GTCEuServerEvents.oreVeins(event => {
    **Default:** All dimensions of the vein's layer.  
    <br>
    _Accepts any number of parameters, or can be called multiple times._
-7. Determines the biomes the vein can generate in.  
+7. Determines the biome (or biome tag) the vein can generate in.  
    **Default:** If no biome is explicitly set, the vein will generate in any biome.  
    <br>
-   You can use both, individual biomes, as well as tags (prefixed with `#`) here.  
-   <br>
-   _Accepts any number of parameters, or can be called multiple times._
+   You can use either an individual biome, or a tag (prefixed with `#`) here.
 8. Uniformly distributed across the height range
 9. Biased towards the center of the height range
 10. You can also use Minecraft's `HeightRangePlacement` directly, instead of the above shorthand versions:  
@@ -75,6 +73,20 @@ GTCEuServerEvents.oreVeins(event => {
     ```
 11. See [Generators](./02-Generators.md#vein-generators) for a list of available generators.
 12. See [Generators](./02-Generators.md#indicator-generators) for a list of available generators.
+
+
+??? example "Creating a new biome tag for your ore vein"
+    In case you want to limit your ore vein to multiple biomes that don't have a common tag yet, you need to add one first:
+
+    ```js title="server_scripts/biome_tags.js"
+    ServerEvents.tags('biome', event => {
+        event.add('kubejs:my_biome_tag', 'minecraft:forest')
+        event.add('kubejs:my_biome_tag', 'minecraft:river')
+    })
+    ```
+
+    You can then use your biome tag by simply calling `vein.biome('#kubejs:my_biome_tag')` in your vein definition.
+
 
 ## Removing an Existing Ore Vein
 
