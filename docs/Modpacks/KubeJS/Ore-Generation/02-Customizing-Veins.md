@@ -79,9 +79,12 @@ GTCEuServerEvents.oreVeins(event => {
 
     ```js
     GTCEuServerEvents.oreVeins(event => {
-        GTRegistries.ORE_VEINS.keys().forEach(id => event.remove(id))
+        let removed_veins = GTRegistries.ORE_VEINS.keys().stream().toList() // (1)
+        removed_veins.forEach(id => event.remove(id))
     })
     ```
+
+    1. Copying the keys first is necessary to avoid modifying the registry while iterating over it.
 
 
 ## Modifying Contents of an Existing Vein
