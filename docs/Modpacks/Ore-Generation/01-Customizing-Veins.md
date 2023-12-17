@@ -22,8 +22,8 @@ GTCEuServerEvents.oreVeins(event => {
 
         // Define where the vein can generate
         vein.layer("deepslate") // (5)
-        vein.dimensions("minecraft:overworld", "minecraft:the_nether") // (6)
-        vein.biomes("#minecraft:is_overworld", "minecraft:soul_sand_valley") // (7)
+        vein.dimensions("minecraft:overworld") // (6)
+        vein.biomes("#minecraft:is_overworld") // (7)
 
         // Define a height range:
         // You must choose EXACTLY ONE of these options! [*]
@@ -48,13 +48,13 @@ GTCEuServerEvents.oreVeins(event => {
    **Default:** `0`
 5. See [Layers & Dimensions](./04-Layers-and-Dimensions.md)
 6. Limits vein generation to the supplied dimensions. Note that these vein's layer must be applicable for them.  
-   **Default:** All dimensions of the vein's layer.
+   **Default:** All dimensions of the vein's layer.  
    <br>
    _Accepts any number of parameters, or can be called multiple times._
 7. Determines the biomes the vein can generate in.  
-   **Default:** If no biome is explicitly set, the vein will generate in any biome.
+   **Default:** If no biome is explicitly set, the vein will generate in any biome.  
    <br>
-   You can use both, individual biomes, as well as tags (prefixed with `#`) here.
+   You can use both, individual biomes, as well as tags (prefixed with `#`) here.  
    <br>
    _Accepts any number of parameters, or can be called multiple times._
 8. Uniformly distributed across the height range
