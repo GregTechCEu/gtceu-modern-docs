@@ -56,4 +56,4 @@ If you just want to stick to ore generation in the default dimensions, the easie
     ```
 
 You can also add ores in other dimensions, but to do so you will have to create a custom World Generation Layer.    
-You'll learn how to do so during the next few chapters.
+You'll learn how to do so in [Layers & Dimensions](./04-Layers-and-Dimensions.md)

@@ -14,55 +14,67 @@ It is also possible to modify or even delete existing ones.
 ```js title="server_scripts/custom_ore_vein.js"
 GTCEuServerEvents.oreVeins(event => {
     event.add("kubejs:custom_vein", vein => {
-        vein.clusterSize(40)
-        vein.weight(200)
-        vein.layer("deepslate")
-        vein.density(0.25)
+        // Basic vein generation properties
+        vein.weight(200) // [*] (1)
+        vein.clusterSize(40) // [*] (2)
+        vein.density(0.25) // [*] (3)
+        vein.discardChanceOnAirExposure(0) // (4)
 
-        vein.addSpawnDimension("minecraft:overworld")
-        vein.addSpawnBiome("#minecraft:is_overworld")
+        // Define where the vein can generate
+        vein.layer("deepslate") // (5)
+        vein.dimensions("minecraft:overworld", "minecraft:the_nether") // (6)
+        vein.biomes("#minecraft:is_overworld", "minecraft:soul_sand_valley") // (7)
 
-        vein.heightRange({
-            height: {
-                type: "uniform",
-                min_inclusive: {
-                  absolute: -60
-                },
-                max_inclusive: {
-                  absolute: 20
-                }
-            }
-        })
-        vein.discardChanceOnAirExposure(0)
-        vein.generator({
-            type: "gtceu:layer",
-            layer_patterns: [
-                [
-                    {
-                        targets: [
-                            "gold",
-                            "tricalcium_phosphate"
-                        ],
-                        min_size: 2,
-                        max_size: 2,
-                        weight: 3
-                    },
-                    {
-                        targets: [
-                            "copper",
-                            "vanadium_magnetite"
-                        ],
-                        min_size: 1,
-                        max_size: 3,
-                        weight: 1
-                    }
-                ]
-            ]
-        })
+        // Define a height range:
+        // You must choose EXACTLY ONE of these options! [*]
+        vein.heightRangeUniform(-60, 20) // (8)
+        vein.heightRangeTriangle(-60, 20) // (9)
+        vein.heightRange(/* ... */) // (10)
+
+        // Define the vein's generator:
+        vein.generator(/* ... */) // [*] (11)
+
+        // Add one or more type of surface indicator to the vein:
+        vein.addIndicator(/* ... */) // (12)
     })
 })
 ```
 
+1. An ore vein's weight determines the chance of it being chosen over another vein type, to be generated at a possible vein location.  
+   The higher the weight, the more frequently an ore vein type will be generated.
+2. Cluster size determines the diameter of an ore vein.
+3. The density determines how frequently ores occur inside the vein.
+4. Determines the chance of an ore block being skipped when it is exposed to air. Must be between `0` and `1`.  
+   **Default:** `0`
+5. See [Layers & Dimensions](./04-Layers-and-Dimensions.md)
+6. Limits vein generation to the supplied dimensions. Note that these vein's layer must be applicable for them.  
+   **Default:** All dimensions of the vein's layer.
+   <br>
+   _Accepts any number of parameters, or can be called multiple times._
+7. Determines the biomes the vein can generate in.  
+   **Default:** If no biome is explicitly set, the vein will generate in any biome.
+   <br>
+   You can use both, individual biomes, as well as tags (prefixed with `#`) here.
+   <br>
+   _Accepts any number of parameters, or can be called multiple times._
+8. Uniformly distributed across the height range
+9. Biased towards the center of the height range
+10. You can also use Minecraft's `HeightRangePlacement` directly, instead of the above shorthand versions:  
+    ```js
+    vein.heightRange(
+        height: {
+            type: "uniform",
+            min_inclusive: {
+                absolute: -60
+            },
+            max_inclusive: {
+                absolute: 20
+            }
+        }
+    })
+    ```
+11. See [Generators](./02-Generators.md#vein-generators) for a list of available generators.
+12. See [Generators](./02-Generators.md#indicator-generators) for a list of available generators.
 
 ## Removing an Existing Ore Vein
 
