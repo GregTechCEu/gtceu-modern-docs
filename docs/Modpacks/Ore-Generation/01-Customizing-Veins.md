@@ -21,7 +21,7 @@ GTCEuServerEvents.oreVeins(event => {
         vein.discardChanceOnAirExposure(0) // (4)
 
         // Define where the vein can generate
-        vein.layer("deepslate") // (5)
+        vein.layer("deepslate") // [*] (5)
         vein.dimensions("minecraft:overworld") // (6)
         vein.biomes("#minecraft:is_overworld") // (7)
 
