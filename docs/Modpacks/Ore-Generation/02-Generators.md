@@ -6,4 +6,113 @@ title: "Generators"
 # Vein Generators
 
 
+## Layered Vein Generator
+
+```js
+vein.layeredVeinGenerator(generator => generator
+    .buildLayerPattern(pattern => pattern
+        .layer(l => l.weight(3).mat(GTMaterials.Silver).size(2, 4))
+        .layer(l => l.weight(2).mat(GTMaterials.Gold).size(1, 1))
+        .layer(l => l.weight(1).block(Block.getBlock('minecraft:oak_log')).size(1, 1))
+        .layer(l => l.weight(1).state(Block.getBlock('minecraft:oak_planks').defaultBlockState()).size(1, 1))
+    )
+)
+```
+
+
+## Veined Vein Generator
+
+```js
+vein.veinedVeinGenerator(generator => generator
+    .oreBlock(GTMaterials.Silver, 4) // (1)
+    .rareBlock(GTMaterials.Gold, 1) // (1)
+    .rareBlockChance(0.25f)
+    .veininessThreshold(0.1f)
+    .maxRichnessThreshold(0.3f)
+    .minRichness(0.3f)
+    .maxRichness(0.5f)
+    .edgeRoundoffBegin(10)
+)
+```
+
+1. **Param 1:** Either a material or block state  
+   **Param 2:** Generation weight  
+
+!!! info "Height Ranges"
+    The height range of the generator is automatically inferred if you use `heightRangeUniform()` or `heightRangeTriangle()` in the vein definition, _before setting the generator_. Otherwise you need to set the height range manually:
+
+    ```js
+    generator.minYLevel(10)
+    generator.maxYLevel(90)
+    ```
+
+
+## Dike Vein Generator
+
+```js
+vein.dikeVeinGenerator(generator => generator
+    .withBlock(GTMaterials.Silver, 3, 20, 60) // (1)
+    .withBlock(GTMaterials.Gold, 1, 20, 40)
+)
+```
+
+1. **Param 1:** Either a material or block state
+   **Param 2:** Generation weight  
+   **Param 3:** Min Y Position  
+   **Param 4:** Max Y Position  
+
+!!! info "Height Ranges"
+    The height range of the generator is automatically inferred if you use `heightRangeUniform()` or `heightRangeTriangle()` in the vein definition, _before setting the generator_. Otherwise you need to set the height range manually:
+
+    ```js
+    generator.minYLevel(10)
+    generator.maxYLevel(90)
+    ```
+
+
+## Standard Vein Generator
+
+!!! failure "Not yet documented"
+
+```js
+vein.standardVeinGenerator(generator => /* ... */)
+```
+
+
+## Geode Vein Generator
+
+!!! failure "Not yet documented"
+
+```js
+vein.geodeVeinGenerator(generator => /* ... */)
+```
+
+
 # Indicator Generators
+
+
+## Surface Rock Indicator Generator
+
+```js
+vein.surfaceIndicatorGenerator(indicator => indicator
+    .surfaceRock(GTMaterials.Platinum) // [*] (1)
+    .placement("above") // (2)
+    .density(0.4)
+    .radius(5)
+)
+```
+
+1. Instead of a surface rock, you can also define any other block:  
+    ```js
+    // Using a block:
+    indicator.block(Block.getBlock('minecraft:oak_log'))
+
+    // Using a block state:
+    indicator.state(Block.getBlock('minecraft:oak_log').defaultBlockState())
+    ```
+2. Valid options:  
+   `surface` generates indicators on the world's surface  
+   `above` generates indicators in the next free space above  
+   `below` generates indicators in the next free space below  
+   <br>
+   **Default:** `surface`
