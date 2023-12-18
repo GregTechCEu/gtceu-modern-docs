@@ -26,12 +26,13 @@ vein.layeredVeinGenerator(generator => generator
 vein.veinedVeinGenerator(generator => generator
     .oreBlock(GTMaterials.Silver, 4) // (1)
     .rareBlock(GTMaterials.Gold, 1) // (1)
-    .rareBlockChance(0.25f)
-    .veininessThreshold(0.1f)
-    .maxRichnessThreshold(0.3f)
-    .minRichness(0.3f)
-    .maxRichness(0.5f)
+    .rareBlockChance(0.25)
+    .veininessThreshold(0.1)
+    .maxRichnessThreshold(0.3)
+    .minRichness(0.3)
+    .maxRichness(0.5)
     .edgeRoundoffBegin(10) // (2)
+    .maxEdgeRoundoff(0.2) // (2)
 )
 ```
 
