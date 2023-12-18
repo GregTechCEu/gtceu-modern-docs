@@ -3,9 +3,10 @@ title: "Alternator"
 ---
 
 
-## Alternator Multiblock By: Drack.ion
+# Alternator Multiblock (by Drack.ion)
 
-# Recipe Type
+
+## Recipe Type
 
 ```js title="alternator_recipe_type.js"
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
@@ -20,7 +21,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 ```
 
 
-# Multiblock
+## Multiblock
 
 ```js title="alternator_multiblock.js"
 GTCEuStartupEvents.registry('gtceu:machine', event => {
@@ -47,7 +48,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 ```
 
 
-# Lang
+## Lang
 
 ```json title="en_us.json"
 {
@@ -57,7 +58,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 ```
 
 
-# Recipes
+## Recipes
 
 ```js title="alternator_recipes.js"
 ServerEvents.recipes(event => {

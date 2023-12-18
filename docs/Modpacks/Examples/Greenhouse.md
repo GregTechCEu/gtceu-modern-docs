@@ -3,7 +3,7 @@ title: "Greenhouse"
 ---
 
 
-# Greenhouse Multiblock By: Drack.ion
+# Greenhouse Multiblock (by Drack.ion)
 
 
 ## Recipe Type
