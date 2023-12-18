@@ -11,3 +11,10 @@ Due to technical limitations, this system does not use Minecraft's features and 
 GT's ores generate in large veins that are placed along a grid (and a random offset per vein) throughout the world.
 
 In this section, you will learn how to customize ore generation for your modpack.
+
+
+## Reloading Ore Generation
+
+!!! warning
+    After changing the ore generation you will have to **restart the server** or **re-open your world**!  
+    It is not enough to simply use `/reload` in this case.
