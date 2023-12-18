@@ -31,12 +31,25 @@ vein.veinedVeinGenerator(generator => generator
     .maxRichnessThreshold(0.3f)
     .minRichness(0.3f)
     .maxRichness(0.5f)
-    .edgeRoundoffBegin(10)
+    .edgeRoundoffBegin(10) // (2)
 )
 ```
 
 1. **Param 1:** Either a material or block state  
-   **Param 2:** Generation weight  
+   **Param 2:** Generation weight
+2. Determines how much the veins become thinner towards their ends
+
+
+!!! info "Noise Parameters"
+    The vein's noise parameters can be summarized as follows:
+    - `veininessThreshold` defines how "sharp" the edges of the vein are.  
+      Higher values result in more "blurry" edges.
+    - `maxRichnessThreshold` defines how many ores generate _inside_ the vein (must be `>= veininessThreshold`).  
+      A higher distance between the values results in less "filled" veins.
+    - `minRichness` and `maxRichness` allow you to limit the output of this calculation to a specific range.
+
+    The output of this calculation determines the chance for each block in the vein to generate.
+
 
 !!! info "Height Ranges"
     The height range of the generator is automatically inferred if you use `heightRangeUniform()` or `heightRangeTriangle()` in the vein definition, _before setting the generator_. Otherwise you need to set the height range manually:
