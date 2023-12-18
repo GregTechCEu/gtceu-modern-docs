@@ -50,11 +50,11 @@ GTCEuServerEvents.oreVeins(event => {
 6. Limits vein generation to the supplied dimensions. Note that these vein's layer must be applicable for them.  
    **Default:** All dimensions of the vein's layer.  
    <br>
-   _Accepts any number of parameters, or can be called multiple times._
+   _Accepts any number of parameters._
 7. Determines the biome (or biome tag) the vein can generate in.  
    **Default:** If no biome is explicitly set, the vein will generate in any biome.  
    <br>
-   You can use either an individual biome, or a tag (prefixed with `#`) here.
+   _Accepts either a single biome tag (prefixed with `#`), or any number of individual biomes._
 8. Uniformly distributed across the height range
 9. Biased towards the center of the height range
 10. You can also use Minecraft's `HeightRangePlacement` directly, instead of the above shorthand versions:  
