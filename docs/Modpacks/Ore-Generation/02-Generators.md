@@ -25,20 +25,23 @@ vein.layeredVeinGenerator(generator => generator
 ```js
 vein.veinedVeinGenerator(generator => generator
     .oreBlock(GTMaterials.Silver, 4) // (1)
-    .rareBlock(GTMaterials.Gold, 1) // (1)
+    .rareBlock(GTMaterials.Gold, 1) // (2)
     .rareBlockChance(0.25)
     .veininessThreshold(0.1)
     .maxRichnessThreshold(0.3)
     .minRichness(0.3)
     .maxRichness(0.5)
-    .edgeRoundoffBegin(10) // (2)
-    .maxEdgeRoundoff(0.2) // (2)
+    .edgeRoundoffBegin(10) // (3)
+    .maxEdgeRoundoff(0.2) // (4)
 )
 ```
 
 1. **Param 1:** Either a material or block state  
    **Param 2:** Generation weight
-2. Determines how much the veins become thinner towards their ends
+2. **Param 1:** Either a material or block state  
+   **Param 2:** Generation weight
+3. Determines how much the veins become thinner towards their ends
+4. Determines how much the veins become thinner towards their ends
 
 
 !!! info "Noise Parameters"
