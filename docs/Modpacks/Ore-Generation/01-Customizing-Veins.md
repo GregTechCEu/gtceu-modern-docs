@@ -23,7 +23,7 @@ GTCEuServerEvents.oreVeins(event => {
         // Define where the vein can generate
         vein.layer("deepslate") // [*] (5)
         vein.dimensions("minecraft:overworld") // (6)
-        vein.biome("#minecraft:is_overworld") // (7)
+        vein.biomes("#minecraft:is_overworld") // (7)
 
         // Define a height range:
         // You must choose EXACTLY ONE of these options! [*]
@@ -76,7 +76,7 @@ GTCEuServerEvents.oreVeins(event => {
 
 
 ??? example "Creating a new biome tag for your ore vein"
-    In case you want to limit your ore vein to multiple biomes that don't have a common tag yet, you need to add one first:
+    In case you want to limit your ore vein to multiple biomes that don't have a common tag yet, you can either specify all biomes manually, or you can create a biome tag:
 
     ```js title="server_scripts/biome_tags.js"
     ServerEvents.tags('biome', event => {
@@ -85,14 +85,14 @@ GTCEuServerEvents.oreVeins(event => {
     })
     ```
 
-    You can then use your biome tag by simply calling `vein.biome('#kubejs:my_biome_tag')` in your vein definition.
+    You can then use your biome tag by simply calling `vein.biomes('#kubejs:my_biome_tag')` in your vein definition.
 
 
 ## Removing an Existing Ore Vein
 
 ```js title="server_scripts/remove_ore_vein.js"
 GTCEuServerEvents.oreVeins(event => {
-     event.remove("gtceu:magnetite_over_vein") 
+     event.remove("gtceu:magnetite_vein_ow") 
 })
 ```
 
@@ -103,42 +103,25 @@ GTCEuServerEvents.oreVeins(event => {
 
     ```js
     GTCEuServerEvents.oreVeins(event => {
-        let removed_veins = GTRegistries.ORE_VEINS.keys().stream().toList() // (1)
-        removed_veins.forEach(id => event.remove(id))
+        event.removeAll()
     })
     ```
 
-    1. Copying the keys first is necessary to avoid modifying the registry while iterating over it.
+    You can also filter the veins you want to remove:
+
+    ```js
+    event.removeAll((id, vein) => id.path != "magnetite_vein_ow")
+    ```
 
 
-## Modifying Contents of an Existing Vein
+## Modifying Existing Veins
 
-!!! warning
-    This currently doesn't work due to a bug.
-
-```js title="modify_ore_vein.js"
-const $Either = Java.loadClass("com.mojang.datafixers.util.Either")
+```js title="server_scripts/modify_ore_vein.js"
 GTCEuServerEvents.oreVeins(event => {
     event.modify("gtceu:cassiterite_vein", vein => {
-        vein.veinGenerator.layerPatterns.get(0).layers.get(0).targets.set(0, $Either.right(GTMaterials.get('diamond')))
+        vein.density(1.0)
     })
 })
 ```
 
-
-## Modifying Ore Veins To Generate In Additional World Gen Layers
-
-```js title="ore_vein_modify_worl_gen_layers.js"
-const $GTOreFeatureEntry = Java.loadClass('com.gregtechceu.gtceu.api.data.worldgen.GTOreFeatureEntry')
-
-GTCEuServerEvents.oreVeins(event => {
-    $GTOreFeatureEntry.ALL.keySet().forEach(veinId => {
-        event.modify(veinId, vein => {
-            vein.layer('air')
-        })
-    }) //(1)
-})
-```
-
-1. For this to work you must first create the new world gen layer of `air`.  
-   _See [Creating a New World Gen Layer](./03-Layers-and-Dimensions.md#creating-a-new-world-gen-layer)_
+The API for vein modifications is the same as for creating new veins.

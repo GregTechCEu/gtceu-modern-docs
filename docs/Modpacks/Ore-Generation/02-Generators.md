@@ -105,7 +105,7 @@ vein.geodeVeinGenerator(generator => /* ... */)
 # Indicator Generators
 
 
-## Surface Rock Indicator Generator
+## Surface Rock Indicators
 
 ```js
 vein.surfaceIndicatorGenerator(indicator => indicator
