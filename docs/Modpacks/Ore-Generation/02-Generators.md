@@ -73,7 +73,7 @@ vein.dikeVeinGenerator(generator => generator
 )
 ```
 
-1. **Param 1:** Either a material or block state
+1. **Param 1:** Either a material or block state  
    **Param 2:** Generation weight  
    **Param 3:** Min Y Position  
    **Param 4:** Max Y Position  
