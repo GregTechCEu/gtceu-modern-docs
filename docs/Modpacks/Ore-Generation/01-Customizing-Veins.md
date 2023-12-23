@@ -127,6 +127,10 @@ GTCEuServerEvents.oreVeins(event => {
 The API for vein modifications is the same as for creating new veins.
 
 
+!!! warning "Moving veins to other dimensions"
+    When moving one of the default veins to another dimension, keep in mind that you also have to change their biome(s) accordingly.
+
+
 ??? example "Modifying ALL existing veins"
     You can also modify all existing ore veins at once:
 
