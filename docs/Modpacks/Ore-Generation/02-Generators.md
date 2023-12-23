@@ -3,10 +3,12 @@ title: "Generators"
 ---
 
 
-# Vein Generators
+# Vein & Indicator Generators
+
+## Vein Generators
 
 
-## Layered Vein Generator
+### Layered Vein Generator
 
 ```js
 vein.layeredVeinGenerator(generator => generator
@@ -20,7 +22,7 @@ vein.layeredVeinGenerator(generator => generator
 ```
 
 
-## Veined Vein Generator
+### Veined Vein Generator
 
 ```js
 vein.veinedVeinGenerator(generator => generator
@@ -64,7 +66,7 @@ vein.veinedVeinGenerator(generator => generator
     ```
 
 
-## Dike Vein Generator
+### Dike Vein Generator
 
 ```js
 vein.dikeVeinGenerator(generator => generator
@@ -87,7 +89,7 @@ vein.dikeVeinGenerator(generator => generator
     ```
 
 
-## Standard Vein Generator
+### Standard Vein Generator
 
 !!! failure "Not yet documented"
 
@@ -96,7 +98,7 @@ vein.standardVeinGenerator(generator => /* ... */)
 ```
 
 
-## Geode Vein Generator
+### Geode Vein Generator
 
 !!! failure "Not yet documented"
 
@@ -105,10 +107,10 @@ vein.geodeVeinGenerator(generator => /* ... */)
 ```
 
 
-# Indicator Generators
+## Indicator Generators
 
 
-## Surface Rock Indicators
+### Surface Rock Indicators
 
 ```js
 vein.surfaceIndicatorGenerator(indicator => indicator
