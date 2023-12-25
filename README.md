@@ -2,7 +2,7 @@
 
 This documentation project is built using [MkDocs](https://www.mkdocs.org/#).
 
-For an autmatically updating live preview in your browser, run `mkdocs serve`
+For an automatically updating live preview in your browser, run `mkdocs serve`
 
 
 ## Installing Required Dependencies
