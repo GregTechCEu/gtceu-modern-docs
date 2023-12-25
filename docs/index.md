@@ -17,6 +17,11 @@ to modern Minecraft versions.
     If you can't find what you're looking for, feel free to ask us on [our Discord](https://discord.gg/bWSWuYvURP).
 
 
+## Download
+You can download an offline version of this wiki here:
+[Download Zip](https://github.com/GregTechCEu/gtceu-modern-docs/archive/refs/heads/gh-pages.zip)
+
+
 ## Want to Contribute?
 
 If you want to contribute to this documentation site, feel free to open a pull request on
