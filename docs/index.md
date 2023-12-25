@@ -18,7 +18,7 @@ to modern Minecraft versions.
 
 
 ## Download
-You can download an offline version of this wiki here:
+You can download an offline version of this wiki here:  
 [Download Zip](https://github.com/GregTechCEu/gtceu-modern-docs/archive/refs/heads/gh-pages.zip)
 
 
