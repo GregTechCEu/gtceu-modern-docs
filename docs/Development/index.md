@@ -11,7 +11,7 @@ pull request with your changes.
 The following pages describe a few important concepts that you will likely run into when working with our codebase.
 
 !!! link "LDLib Docs"
-    [:simple-github: LDLib-Architectury :material-arrow-right: Wiki](https://github.com/Low-Drag-MC/LDLib-Architectury/wiki)
+    [:material-github: LDLib-Architectury :material-arrow-right: Wiki](https://github.com/Low-Drag-MC/LDLib-Architectury/wiki)
 
     This mod is based on the LDLib library for a lot of comminly used functionalities.  
     Please refer to its documentation as well.

@@ -29,7 +29,7 @@ as other resources you might find helpful.
 LDLib is the main library we're using for GTCEu-Modern.
 
 !!! link "LDLib Docs"
-    [:simple-github: LDLib-Architectury :material-arrow-right: Wiki](https://github.com/Low-Drag-MC/LDLib-Architectury/wiki)
+    [:material-github: LDLib-Architectury :material-arrow-right: Wiki](https://github.com/Low-Drag-MC/LDLib-Architectury/wiki)
 
 
 ## Mixins
@@ -43,7 +43,7 @@ LDLib is the main library we're using for GTCEu-Modern.
     Note that this is not exclusive to Fabric, but applies for all platforms instead.
 
 !!! link "Official Docs"
-    [:simple-github: Mixin :material-arrow-right: Wiki](https://github.com/SpongePowered/Mixin/wiki)
+    [:material-github: Mixin :material-arrow-right: Wiki](https://github.com/SpongePowered/Mixin/wiki)
 
     A more detailed technical documentation on mixins.
 
@@ -51,7 +51,7 @@ LDLib is the main library we're using for GTCEu-Modern.
 ## DFU (DataFixerUpper)
 
 !!! link "Unofficial Documentation"
-    [:simple-github: Documented DataFixerUpper](https://github.com/kvverti/Documented-DataFixerUpper)
+    [:material-github: Documented DataFixerUpper](https://github.com/kvverti/Documented-DataFixerUpper)
 
     Unofficial documentation for Mojang's DataFixerUpper library.
 
@@ -59,7 +59,7 @@ LDLib is the main library we're using for GTCEu-Modern.
 ## Registrate & Architectury
 
 !!! link "Using Registrate"
-    [:simple-github: Registrate](https://github.com/tterrag1098/Registrate)
+    [:material-github: Registrate](https://github.com/tterrag1098/Registrate)
 
 !!! link "Architectury Gradle Plugin"
     [Architectury-Wiki :material-arrow-right: Gradle Plugin](https://docs.architectury.dev/plugin/introduction)
