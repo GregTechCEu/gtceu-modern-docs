@@ -23,10 +23,13 @@ as other resources you might find helpful.
     - [Forge Community-Wiki](https://forge.gemwire.uk/wiki/Main_Page)
     - [MCJty's Modding Wiki](https://www.mcjty.eu/docs/intro)
 
-!!! link "Architectury Gradle Plugin"
-    [Architectury-Wiki :material-arrow-right: Gradle Plugin](https://docs.architectury.dev/plugin/introduction)
 
-    Note that we're only using Architectury's build system, not the library itself.
+## LDLib
+
+LDLib is the main library we're using for GTCEu-Modern.
+
+!!! link "LDLib Docs"
+    [:simple-github: LDLib-Architectury :material-arrow-right: Wiki](https://github.com/Low-Drag-MC/LDLib-Architectury/wiki)
 
 
 ## Mixins
@@ -51,3 +54,14 @@ as other resources you might find helpful.
     [:simple-github: Documented DataFixerUpper](https://github.com/kvverti/Documented-DataFixerUpper)
 
     Unofficial documentation for Mojang's DataFixerUpper library.
+
+
+## Registrate & Architectury
+
+!!! link "Using Registrate"
+    [:simple-github: Registrate](https://github.com/tterrag1098/Registrate)
+
+!!! link "Architectury Gradle Plugin"
+    [Architectury-Wiki :material-arrow-right: Gradle Plugin](https://docs.architectury.dev/plugin/introduction)
+
+    Note that we're only using Architectury's build system, not the library itself.
