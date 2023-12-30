@@ -10,6 +10,13 @@ pull request with your changes.
 
 The following pages describe a few important concepts that you will likely run into when working with our codebase.
 
-This mod is based on [Architectury](https://docs.architectury.dev/start) for compatibility across multiple modding
-platforms, as well as the [LDLib](https://github.com/Low-Drag-MC/LDLib-Architectury/wiki) library for a lot of
-commonly used functionalities. Please refer to the documentation for those as well.
+!!! link "LDLib Docs"
+    [:material-github: LDLib-Architectury :material-arrow-right: Wiki](https://github.com/Low-Drag-MC/LDLib-Architectury/wiki)
+
+    This mod is based on the LDLib library for a lot of comminly used functionalities.  
+    Please refer to its documentation as well.
+
+!!! link "Architectury Gradle Plugin"
+    [Architectury-Wiki :material-arrow-right: Gradle Plugin](https://docs.architectury.dev/plugin/introduction)
+
+    This mod is using Architectury's build system, for compatibiliy across multiple moding platforms.
