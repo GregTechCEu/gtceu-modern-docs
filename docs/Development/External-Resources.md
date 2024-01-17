@@ -1,10 +1,10 @@
 ---
-icon: "material/link-variant"
+icon: "material/link-box-variant"
 title: "External Resources"
 ---
 
 
-# External Resources
+# :material-link-box-variant: External Resources
 
 This page contains links to external documentation that may be useful for several topics regarding development, as well
 as other resources you might find helpful.

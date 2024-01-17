@@ -1,9 +1,10 @@
 ---
+icon: "material/frequently-asked-questions"
 title: "FAQ"
 ---
 
 
-# Frequently Asked Questions
+# :material-frequently-asked-questions: Frequently Asked Questions
 
 
 ## How to disable Shimmer's colored light monitor
