@@ -1,5 +1,5 @@
 ---
-icon: "material/information-variant-circle-outline"
+icon: "material/information-box"
 title: "Development Glossary"
 search:
     boost: 100
@@ -15,7 +15,7 @@ search:
 -->
 
 
-# :material-information-variant-circle-outline: Development Glossary
+# :material-information-box: Development Glossary
 
 !!! info
     This is an overview of technical terms that are commonly used in this documentation.  
