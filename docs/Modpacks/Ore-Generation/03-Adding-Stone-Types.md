@@ -20,6 +20,7 @@ GTCEuStartupEvents.registry('gtceu:tag_prefix', e => {
     stoneTypes.forEach(type => {
         e.create('blockium', 'ore') // (1)
             .stateSupplier(() => Block.getBlock('my_mod:blockium').defaultBlockState()) // (2)
+            .baseModelLocation('my_mod:block/blockium') // (3)
             .unificationEnabled(true)
             .materialIconType(GTMaterialIconType.ore)
             .generationCondition(ItemGenerationCondition.hasOreProperty)
@@ -29,6 +30,7 @@ GTCEuStartupEvents.registry('gtceu:tag_prefix', e => {
 
 1. The first parameter for `create()` is the name that corresponds to your stone type. The second parameter is **always** `'ore'`!
 2. For `Block.getBlock()` you must use the stone type's block ID as a parameter.
+3. This is the `ResourceLocation` of the base stone type's model. If the base block uses custom rendering, you may need to create your own model.
 
 
 ```json title="assets/gtceu/lang/en_us.json"
