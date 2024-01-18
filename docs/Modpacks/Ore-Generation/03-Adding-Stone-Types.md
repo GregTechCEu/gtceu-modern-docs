@@ -17,14 +17,12 @@ Replace this with the block you want to add ores for.
 
 ```js title="startup_scripts/ore_types.js"
 GTCEuStartupEvents.registry('gtceu:tag_prefix', e => {
-    stoneTypes.forEach(type => {
-        e.create('blockium', 'ore') // (1)
-            .stateSupplier(() => Block.getBlock('my_mod:blockium').defaultBlockState()) // (2)
-            .baseModelLocation('my_mod:block/blockium') // (3)
-            .unificationEnabled(true)
-            .materialIconType(GTMaterialIconType.ore)
-            .generationCondition(ItemGenerationCondition.hasOreProperty)
-    })
+    e.create('blockium', 'ore') // (1)
+        .stateSupplier(() => Block.getBlock('my_mod:blockium').defaultBlockState()) // (2)
+        .baseModelLocation('my_mod:block/blockium') // (3)
+        .unificationEnabled(true)
+        .materialIconType(GTMaterialIconType.ore)
+        .generationCondition(ItemGenerationCondition.hasOreProperty)
 })
 ```
 
@@ -59,3 +57,18 @@ If you just want to stick to ore generation in the default dimensions, the easie
 
 You can also add ores in other dimensions, but to do so you will have to create a custom World Generation Layer.    
 You'll learn how to do so in [Layers & Dimensions](./04-Layers-and-Dimensions.md)
+
+
+## Non-Default BlockStates
+
+Some mods may generate blocks with `BlockState`s that differ from their `defaultBlockState`.  
+In this case you have to specify the actually generated block state in your ore stone type's `stateSupplier`:
+
+```js
+let UtilsJS = Java.loadClass("dev.latvian.mods.kubejs.util.UtilsJS")
+
+GTCEuStartupEvents.registry('gtceu:tag_prefix', e => {
+    e.create(type.path, 'ore')
+        .stateSupplier(() => UtilsJS.parseBlockState("my_mod:blockium[some_blockstate_property=true]"))
+})
+```
