@@ -5,16 +5,16 @@ title: Bedrock Fluid Veins
 
 Bedrock fluid veins can be pumped using fluid drills.
 
-## Creating a Bedrock Fluid Vein
+# Creating a Bedrock Fluid Vein
 
 
 ```js title="fluid_veins.js"
 // In server events
 GTCEuServerEvents.fluidVeins(event => {
 
-    event.add('start:abydos_titanite_rich_magma_deposit', vein => {
-        vein.addSpawnDimension('sgjourney:abydos')
-        vein.fluid(() => Fluid.of('gtceu:abydos_titanite_rich_magma').fluid)
+    event.add('gtceu:custom_bedrock_fluid_vein', vein => {
+        vein.addSpawnDimension('minecraft:overworld')
+        vein.fluid(() => Fluid.of('gtceu:custom_fluid').fluid)
         vein.weight(600)
         vein.minimumYield(120)
         vein.maximumYield(720)
