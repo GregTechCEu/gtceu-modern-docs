@@ -7,7 +7,7 @@ title: Element Creation
 
 Elements are the base of GT materials. Registering an element WILL NOT add any items.
 To make a new element(NOTE: you can add only elements that are NOT present on the periodic table),
-write an 'event.create()` call in the registry function like in the example bellow.
+write an `event.create()` call in the registry function like in the example below.
 Inside the parentheses the following parameters are introduced:
 
 1.  Element Name -> use '' or "" to write the element name.
