@@ -92,7 +92,8 @@ ServerEvents.recipes(event => {
 
 ### Rhino Jank
 
-!!! warning "Due to some Rhino Jank, when adding rock breaker recipes you will need to manually tell Rhino how to interpret `.addData()`."
+!!! warning
+    Due to some Rhino Jank, when adding rock breaker recipes you will need to manually tell Rhino how to interpret `.addData()`.
 
 ```js title="rhino_jank_rock_breaker.js"
 ServerEvents.recipes(event => {
