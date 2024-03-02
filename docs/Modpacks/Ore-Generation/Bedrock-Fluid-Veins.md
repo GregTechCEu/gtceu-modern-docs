@@ -3,10 +3,11 @@ title: Bedrock Fluid Veins
 ---
 
 
-Bedrock fluid veins can be pumped using fluid drills.
+# Bedrock Fluid Veins
 
-# Creating a Bedrock Fluid Vein
+Bedrock Fluid Veins are invisable veins that exist under the bedrock, to find Fluid Veins you must have at least a HV tier Prospector. A Fluid Drilling Rig must be used to obtain the fluids out of the vein.
 
+## Creating a Bedrock Fluid Vein
 
 ```js title="fluid_veins.js"
 // In server events

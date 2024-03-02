@@ -5,6 +5,8 @@ title: Custom Recipe Type
 
 ## Creating a Recipe Type
 
+!!! important "Recipe Types MUST be registered before the machines or multiblocks"
+
 ```js title="test_recipe_type.js"
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('test_recipe_type')
