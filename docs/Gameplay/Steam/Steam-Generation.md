@@ -21,7 +21,7 @@ or use a water connection from any other mod.
 
 ## After Steel
 
-After unlocking steam with a primitive blast furnace you will get access to the high pressure versions of the boilers and allow you to produce more steam.
+After unlocking steel (using a primitive blast furnace) you will get access to the high pressure versions of the boilers and allow you to produce more steam.
 
 ## Large Boilers 
 
