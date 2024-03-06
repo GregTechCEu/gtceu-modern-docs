@@ -25,7 +25,7 @@ After unlocking steam with a primitive blast furnace you will get access to the 
 
 ## Large Boilers 
 
-Large boilers allow you to create massive amount of steam in the blink of an eye. A boiler can be constructed of many different GT materials, that will allow for different steam generation rates (_consult the table bellow_).
+Large boilers allow you to create massive amount of steam in the blink of an eye. A boiler can be constructed of many different GT materials, that will allow for different steam generation rates (_consult the table below_).
 
 ## Base Generation Rates 
 
