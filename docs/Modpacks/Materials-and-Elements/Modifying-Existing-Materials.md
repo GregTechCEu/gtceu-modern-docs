@@ -26,7 +26,7 @@ All periodic table elements are present in GT, but some of them don't have any p
         GTMaterials.Iodine.setProperty(PropertyKey.FLUID, new $FluidProperty());
         GTMaterials.Iodine.getProperty(PropertyKey.FLUID).storage.enqueueRegistration(GTFluidStorageKeys.LIQUID, new GTFluidBuilder());
         GTMaterials.Oganesson.setProperty(PropertyKey.FLUID, new $FluidProperty());
-        GTMaterials.Iodine.getProperty(PropertyKey.FLUID).storage.enqueueRegistration(GTFluidStorageKeys.GAS, new GTFluidBuilder()); // (1)
+        GTMaterials.Iodine.getProperty(PropertyKey.FLUID).storage.enqueueRegistration(GTFluidStorageKeys.GAS, new GTFluidBuilder()); //Can be LIQUID, GAS, PLASMA or MOLTEN
 
         // Blast Property
         GTMaterials.Zirconium.setProperty(PropertyKey.BLAST, new $BlastProperty(8000, 'higher', GTValues.VA(GTValues.MV), 8000));
@@ -46,8 +46,6 @@ You can even add an ore to existing materials:
         
     });
 ```
-
-1. Can be LIQUID, GAS, PLASMA or MOLTEN
 
 You can also add flags to existing materials:
 
