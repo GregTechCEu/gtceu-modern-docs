@@ -87,8 +87,36 @@ ServerEvents.recipes(event => {
         - `.outputFluids`
         - `.chancedFluidOutput()`
 - Energy:   
-    
-    
+
+### Research
+
+In GTCEu there exists the `Research System` which allows for adding extra requirements to recipes such as: Scanner Research, Station Research and Computation.
+
+```js title="scanner_research.js"
+ServerEvents.recipes(event => {
+    event.recipes.gtceu.assembly_line('scanner_test')
+        .itemInputs('64x minecraft:coal')
+        .itemOutputs('minecraft:diamond')
+        .duration(10000)
+        .EUt(GTValues.VA[GTValues.IV])
+        ["scannerResearch(java.util.function.UnaryOperator)"](b => b.researchStack(Item.of('minecraft:coal_block')).EUt(GTValues.VA[GTValues.IV]).duration(420)) // (1)
+})
+```
+
+1. Note due to a `JS Moment` you have to force `scannerResearch` to be interpreted by Rhino in a specific way. Scanner Research accepts an `ItemStack` input in the `.researchStack()` object, and you can also define the `EUt` and `Duration` outside of the `.researchStack()` object.
+
+```js title="station_research"
+ServerEvents.recipes(event => {
+    event.recipes.gtceu.assembly_line('station_test')
+        .itemInputs('64x minecraft:coal')
+        .itemOutputs('minecraft:diamond')
+        .duration(10000)
+        .EUt(GTValues.VA[GTValues.IV])
+        .stationResearch(b => b.researchStack(Item.of('minecraft:coal_block')).EUt(GTValues.VA[GTValues.IV]).CWUt(10)) // (1)
+})
+```
+
+1. Just like `Scanner Research` `Station Research` accepts an `ItemStack` input in the `.researchStack()` object, however you can only define `EUt` and `CWUt` outside of the `.researchStack()` object. `CWUt` is used to define the duration of the `Station Research` recipe.
 
 ### Rhino Jank
 
