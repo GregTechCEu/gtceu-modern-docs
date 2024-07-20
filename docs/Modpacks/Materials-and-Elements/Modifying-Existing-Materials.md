@@ -36,7 +36,7 @@ All periodic table elements are present in GT, but some of them don't have any p
 
 You can even add an ore to existing materials:
 
-```js title="flags.js
+```js title="flags.js"
     GTCEuStartupEvents.registry('gtceu:material', event => {
 
     const $OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty');
@@ -49,7 +49,7 @@ You can even add an ore to existing materials:
 
 You can also add flags to existing materials:
 
-```js title="flags.js
+```js title="flags.js"
     GTCEuStartupEvents.registry('gtceu:material', event => {
 
         GTMaterials.Lead.addFlags(GTMaterialFlags.GENERATE_GEAR); //This is for materials already in GTCEU
