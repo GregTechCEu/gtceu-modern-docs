@@ -8,7 +8,7 @@ title: "Ore Processing Plant"
 
 ## Recipe Type
 
-```js title="alternator_recipe_type.js"
+```js title="ore_processing_plant.js"
 GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
     event.create('ore_processing_plant')
         .category('ore_processing_plant')
@@ -21,7 +21,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', event => {
 
 ## Multiblock
 
-```js title="alternator_multiblock.js"
+```js title="ore_processing_plant.js"
 GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('ore_processing_plant', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
@@ -48,6 +48,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             .build())
         .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_robust_tungstensteel",
         "gtceu:block/multiblock/primitive_blast_furnace", false);
+    })
 ```
 
 
