@@ -68,8 +68,7 @@ GTCEuServerEvents.oreVeins(event => {
             max_inclusive: {
                 absolute: 20
             }
-        }
-    })
+        })
     ```
 11. See [Generators](./02-Generators.md#vein-generators) for a list of available generators.
 12. See [Generators](./02-Generators.md#indicator-generators) for a list of available generators.
