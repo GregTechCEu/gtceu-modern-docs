@@ -4,26 +4,25 @@ title: Material Creation
 
 
 Materials are in-game items or fluids. They can be dusts, ingots, gems, fluids and all their derivatives.
-To make a new material (**NOTE**: to add a material that is present on the periodic table, but doesn't have any in-game items/fluids, look below for how to do it),
-
-write an `event.create()` call in the registering function, like in the examples.
-Write inside the parentheses the name of the material inside `''` or "".
+To make a new material, write an `event.create()` call in the registering function, like in the examples.
+Write inside the parentheses the name of the material inside `''` or `""`.
+(**NOTE**: to add a material that is present on the periodic table, but doesn't have any in-game items/fluids, look below for how to do it)
 
 You can change the properties of the material by adding any combination of the following calls:
 
 - `.ingot()` will make the material have both an ingot and dust form.
-- `.dust()` will make the material have a dust form. Don't use this together with `.dust()`.
+- `.dust()` will make the material have a dust form. Don't use this together with `.ingot()`.
 - `.gem()` will make the material have both a gem form and a dust form. Don't use those together with `.dust()` or `.ingot()`
-- `.fluid()` will make the material have a fluid form.
+- `.liquid()` will make the material have a liquid (fluid) form with liquid properties.
 - `.gas()` will make the material have a gas (fluid) form with gas properties.
 - `.plasma()` will make the material have a plasma (fluid) form with plasma properties.
 - `.polymer()` will make the material have a dust form with polymer properties.
-- `.burnTime(burn time in ticks)` will turn the material into a furnace fuel.
-- `.fluidBurnTime(burn time in ticks)` defines how long the fluid of the material will burn.
+- `.burnTime(int burnTime)` will turn the material into a furnace fuel.
+- `.fluidBurnTime(int burnTime)` defines how long the fluid of the material will burn.
 - `.components(component1, component2, ...)` describes the composition. The components are a list of elements of the following form: `'Kx material_name'`, where `K` is a positive integer.
 - `.iconSet(set)` gives the material an icon set.
-- `.color(color code)` gives the material a color. The color must be provided as a hex value in the following form: `0xNNNNNN`, where `N` are digits.
-- `.secondaryColor(color code)` gives the material a secondary color. If this is not being called, the secondary value will default to white(0xffffff).
+- `.color(int colorCode)` gives the material a color. The color must be provided as a hex value in the following form: `0xNNNNNN`, where `N` are digits.
+- `.secondaryColor(int colorCode)` gives the material a secondary color. If this is not being called, the secondary value will default to white(0xffffff).
 - `.flags(flag1, flag2, ...)` can be used to select certain properties of the material, like generating gears, or disabling decomposition.
 - `.element(element)` -> similar to `.components()`, but is used when the material represents an element.
 - `.rotorStats(speed, damage, durability)` -> this will create a turbine rotor from this material.
@@ -64,7 +63,7 @@ You can change the properties of the material by adding any combination of the f
     2. harvest level, burn time (e.g. `ingot(2, 2000)` will make the material have the harvest level of iron tools and will burn in furnaces as fuel for 2000 ticks or 100 seconds).
 
 !!! tip "Disabling Decomposition"
-    Depending on the composition, GT will autogenerate an electrolyzer or centrifuge recipe to decompose the material. You can block that by adding the disable decomposition flag.
+    Depending on the composition, GT will autogenerate an electrolyzer or centrifuge recipe to decompose the material. You can block that by adding the disable decomposition flag. `DISABLE_DECOMPOSITION`
 
 !!! tip "Choosing EU/t"
     GT has some builtin constants to ease choosing the required EU/t:
