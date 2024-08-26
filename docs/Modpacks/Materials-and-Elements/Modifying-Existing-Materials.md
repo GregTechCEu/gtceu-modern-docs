@@ -10,8 +10,7 @@ All periodic table elements are present in GT, but some of them don't have any p
 ```js title="periodic_table_elements.js"
     const $IngotProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty');
     const $DustProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.DustProperty');
-    const $FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty');
-    const $BlastProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty')
+    const $BlastProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.BlastProperty');
 
     GTCEuStartupEvents.registry('gtceu:material', event => {
 
@@ -22,26 +21,41 @@ All periodic table elements are present in GT, but some of them don't have any p
         // Dust
         GTMaterials.Selenium.setProperty(PropertyKey.DUST, new $DustProperty());
 
-        // Fluid
-        GTMaterials.Iodine.setProperty(PropertyKey.FLUID, new $FluidProperty());
-        GTMaterials.Iodine.getProperty(PropertyKey.FLUID).storage.enqueueRegistration(GTFluidStorageKeys.LIQUID, new GTFluidBuilder());
-        GTMaterials.Oganesson.setProperty(PropertyKey.FLUID, new $FluidProperty());
-        GTMaterials.Iodine.getProperty(PropertyKey.FLUID).storage.enqueueRegistration(GTFluidStorageKeys.GAS, new GTFluidBuilder()); //Can be LIQUID, GAS, PLASMA or MOLTEN
-
         // Blast Property
         GTMaterials.Zirconium.setProperty(PropertyKey.BLAST, new $BlastProperty(8000, 'higher', GTValues.VA(GTValues.MV), 8000));
 
     });
 ```
 
+Adding fluids to existing materials requires a bit of work with the new FluidStorage system
+
+```js title=fluid_property.js"
+
+const $FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty');
+const $FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder');
+const $FluidStorageKeys = Java.loadClass('com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys');
+
+GTCEuStartupEvents.registry('gtceu:material', event => {
+    addFluid(GTMaterials.Iodine, $FluidStorageKeys.LIQUID); // Can be LIQUID, GAS, PLASMA or MOLTEN
+    addFluid(GTMaterials.Oganesson, $FluidStorageKeys.GAS);
+}
+
+
+let addFluid = (mat, key) => {
+    let prop = new $FluidProperty();
+    prop.getStorage().enqueueRegistration(key, new $FluidBuilder());
+    mat.setProperty(PropertyKey.FLUID, prop);
+}
+```
+
 You can even add an ore to existing materials:
 
-```js title="flags.js"
+```js title="ore_property.js"
     GTCEuStartupEvents.registry('gtceu:material', event => {
 
     const $OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty');
 
-        //Zinc Ore
+        // Zinc Ore
         GTMaterials.Zinc.setProperty(PropertyKey.ORE, new $OreProperty());
         
     });
@@ -52,8 +66,8 @@ You can also add flags to existing materials:
 ```js title="flags.js"
     GTCEuStartupEvents.registry('gtceu:material', event => {
 
-        GTMaterials.Lead.addFlags(GTMaterialFlags.GENERATE_GEAR); //This is for materials already in GTCEU
-        GTMaterials.get('custom_material_name').addFlags(GTMaterialFlags.GENERATE_FOIL); //This only works for materials added by GTCEU addons
+        GTMaterials.Lead.addFlags(GTMaterialFlags.GENERATE_GEAR); // This is for materials already in GTCEU
+        GTMaterials.get('custom_material_name').addFlags(GTMaterialFlags.GENERATE_FOIL); // This only works for materials added by GTCEU addons
         
     });
 ```

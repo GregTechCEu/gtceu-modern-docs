@@ -40,8 +40,11 @@ The following icon sets are available by default:
 
 ## Custom Icon Sets
 
-Custom iconsets can be specified as well, for example `GTMatericalIconSet.get('infinity')`.
+Custom iconsets can be specified as well, using the `gtceu:matieral_icon_set` event:
 
-```js
-GTMaterialIconSet.get('')
+```js title="custom_iconsets.js"
+GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
+    event.create('starry')
+        .parent('shiny')
+})
 ```
