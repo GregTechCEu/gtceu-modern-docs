@@ -28,7 +28,9 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 })
 ```
 
+
 1. Machine ID, Machine Type, Pollution Produced, Voltage Tiers
+
 
 
 ## Creating Custom Kinetic Machine
@@ -83,7 +85,9 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 })
 ```
 
+
 1. You can add tooltips to your multiblock controllers that show up when you mouseover them. Each separate call of ```.tooltips()``` will add a separate line to the controller's tooltip. ```Component.translatable()``` reads entries from .json lang files placed in ```kubejs/assets/gtceu/lang``` or supplied via a standalone resource pack. The ```Component``` class is autoloaded by KubeJS at compile time; it doesn't need to be manually loaded.
+
 
 ### Shape Info
 
