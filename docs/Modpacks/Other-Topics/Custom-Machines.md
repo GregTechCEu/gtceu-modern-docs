@@ -21,14 +21,16 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 
 ```js title="test_electric_machine.js"
 GTCEuStartupEvents.registry('gtceu:machine', event => {
-    event.create('test_electric', 'simple', GTValues.LV, GTValues.MV, GTValues.HV) // (1)
+    event.create('test_electric', 'simple', 0, GTValues.LV, GTValues.MV, GTValues.HV) // (1)
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('test_recipe_type')
         .tankScalingFunction(tier => tier * 3200)
 })
 ```
 
-1. Machine ID, Machine Type, Voltage Tiers
+
+1. Machine ID, Machine Type, Pollution Produced, Voltage Tiers
+
 
 
 ## Creating Custom Kinetic Machine
@@ -59,6 +61,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
 ```js title="test_multiblock.js"
 GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('test_generator', 'multiblock')
+        .tooltips(Component.translatable('your.langfile.entry.here')) // (1)
         .rotationState(RotationState.NON_Y_AXIS)
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .recipeTypes(['test_recipe_type_1', 'test_recipe_type_2'])
@@ -81,6 +84,10 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         )
 })
 ```
+
+
+1. You can add tooltips to your multiblock controllers that show up when you mouseover them. Each separate call of ```.tooltips()``` will add a separate line to the controller's tooltip. ```Component.translatable()``` reads entries from .json lang files placed in ```kubejs/assets/gtceu/lang``` or supplied via a standalone resource pack. The ```Component``` class is autoloaded by KubeJS at compile time; it doesn't need to be manually loaded.
+
 
 ### Shape Info
 
