@@ -17,7 +17,11 @@ If this is your first time playing Gregtech, we highly suggest the [GTCEu Commun
 ---
 
 GregTech ores generate in large vains placed along a grid. Mine, process, and craft them into various items to progress through different ages of technology. 
+
+
 [Steam](./Steam/index.md)
+
+
 [LV]
 
 ---
