@@ -18,8 +18,7 @@ Please note that these are the default settings and may be different in certain 
 - Tricalcium Phosphate
 - Pyrochlore
 
-**Height range:** 10 to 80
-
+[Apatite Vein](./assets/Apatite%20Vein.png) { align=left }
 
 ### Cassiterite Vein
 
