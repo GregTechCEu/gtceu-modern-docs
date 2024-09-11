@@ -14,11 +14,11 @@ Please note that these are the default settings and may be different in certain 
 
 ### Apatite Vein
 
+[Apatite Vein](./assets/Apatite%20Vein.png) { align=left }
+
 - Apatite
 - Tricalcium Phosphate
 - Pyrochlore
-
-[Apatite Vein](./assets/Apatite%20Vein.png) { align=left }
 
 ### Cassiterite Vein
 
