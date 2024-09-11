@@ -14,7 +14,7 @@ Please note that these are the default settings and may be different in certain 
 
 ### Apatite Vein
 
-![Apatite Vein](./assets/Apatite%20Vein.png){: style="height:150px;width:150px"}
+![Apatite Vein](./assets/Apatite%20Vein.png){: style="height:225px;width:225px" allign=left }
 
 - Apatite
 - Tricalcium Phosphate
