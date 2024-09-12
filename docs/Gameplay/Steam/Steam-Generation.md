@@ -17,7 +17,16 @@ For early game steam generation you have two options:
 For water you can use a **primitive pump**
 ![Primitive water pump](./assets/p_water_pump.png)
 
-or use a water connection from any other mod.
+or use a water connection from any other mod, be carefull to set the flow _or the little arrow pointing in the direction you want_, or else all your water pipes will fill with steam!
+
+## Steel
+Before you get started on the quest for steel, you'll need a few coke ovens _you should have made these before steam_. you need 116 coke oven bricks to form 1 coke oven.
+This is a perfect time to learn about _wall sharing_, probably the **most** usefull feature for multiblocks, 
+Now that you have steam machines, you will need a compresser to craft fireclay dust, from brick dust and clay dust, put it into the compresser and wait 3-5 buisness days. Once you have compressed fireclay bricks just smelt them and ta-da, you'll need a lot more. You will need these bricks to craft the Primitave Blast Furnace
+
+![Primitive Blast furnace]
+
+
 
 ## After Steel
 

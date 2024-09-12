@@ -8,7 +8,8 @@ Steam is the first of many stages that come with the Gregtech mod. It will be yo
 
 In this age you'll need Bronze, lots and lots of bronze, but you'll get a easier recipe in the alloy smelter.
 To prepare the first batch of it you will need [Tin and Copper](/docs/Gameplay/Ore-Generation.md) just crush the ingots with a GT mortar. 
-![Ingot crushing recipe](./assets/ingot_crushed.png)
+
+![Ingot crushing recipe](./assets/crushed_bronze.png)
 
 Then mix them in a crafting table in _3_ to _1_ ratio. Then smelt the dust into an ingot.
 ![Bronze dust recipe](./assets/bronze_recipe.png)
