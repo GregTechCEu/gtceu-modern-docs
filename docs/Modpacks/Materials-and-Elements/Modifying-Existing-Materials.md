@@ -29,7 +29,7 @@ All periodic table elements are present in GT, but some of them don't have any p
 
 Adding fluids to existing materials requires a bit of work with the new FluidStorage system
 
-```js title=fluid_property.js"
+```js title="fluid_property.js"
 
 const $FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty');
 const $FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder');
