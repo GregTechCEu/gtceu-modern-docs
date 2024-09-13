@@ -12,21 +12,39 @@ For early game steam generation you have Three options:
  * Solid - uses coal to heat up the water.
  * Solar - generate steam from solar boilers _doesn't work at night_.
 
+
+## Water
 For water you can use a **primitive pump**, it generates water _anywhere_ in the world!
+
 ![Primitive water pump](./assets/p_water_pump.png)
 
 or use a water connection from any other mod, be carefull to set the flow _or the little arrow pointing in the direction you want_, or else all your water pipes will fill with steam!
 
 ## Steel
-Before you get started on the quest for steel, you'll need a few coke ovens _you should have made these before steam_. you need 116 coke oven bricks to form 1 coke oven. You'll need this for _charcoal_, or _coal coke_. Coal coke is the most effeciant way of making steel in a primitive blast furnace
+Before you get started on the quest for steel, you'll need a few coke ovens _you should have made these before steam_. you need 116 coke oven bricks to form 1 coke oven. You'll need this for _charcoal_, or _Coke_. coke is the most effeciant way of making steel in a primitive blast furnace. Instead of needing 2 coal for 1 steel, with coke you can use 1 coke for 1 steel. _Using Wrought iron isnt worth it for steel just yet_.
+
+
+|    Fuel     |    Ingot     | Time |
+|-------------|--------------|------|
+| 2x Charcoal |     Iron     | 90 s |
+| 2x Coal     |     Iron     | 90 s |
+| 1x Coke     |     Iron     | 75 s |
+| 2x Charcoal | Wrought Iron | 40 s |
+| 2x Coal     | Wrougth Iron | 40 s |
+| 1x Coke     | Wrought Iron | 35 s |
+
 
 This is a perfect time to learn about _wall sharing_, probably the **most** usefull feature for multiblocks, it is a feature which allows you to share the walls of a multiblock of the same type, so instead of making 58 coke bricks, you only need _49_ bricks with wall sharing.
 
 ![Not wallsharing](./assets/non_wall_shareing.png)    ![Walsharing](./assets/wall_sharing.png)
 
-Now that you have steam machines, you will need a compresser to craft fireclay dust, from brick dust and clay dust, put it into the compresser and wait 3-5 buisness days. Once you have compressed fireclay bricks just smelt them and ta-da, you'll need a lot more. You will need these bricks to craft the Primitave Blast Furnace
+Now that you have steam machines, you will need a compresser to craft fireclay Bricks. From brick dust and clay dust, Craft fireclay dust. At a ratio of 1:1:2 
 
-![Primitive Blast furnace]
+![Fireclay Dust](./assets/fireclay_dust.png)
+
+Put it into the compresser and wait 3-5 buisness days. Once you have compressed fireclay bricks just smelt them and ta-da, you'll need a lot more. You will need these bricks to craft the Primitave Blast Furnace
+
+![Primitive Blast furnace](./assets/Primitive_blast_furnace.png)
 
 
 

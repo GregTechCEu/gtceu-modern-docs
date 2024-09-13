@@ -14,7 +14,7 @@ To prepare the first batch of it you will need [Tin and Copper](/docs/Gameplay/O
 Then mix them in a crafting table in _3_ to _1_ ratio. Then smelt the dust into an ingot.
 ![Bronze dust recipe](./assets/bronze_recipe.png)
 
-To power steam machines you will need to [Generate Steam](/docs/Gameplay/Steam/Steam-Generation.md),learn how to transport steam using pipes.
+To power steam machines you will need to [Generate Steam](/docs/Gameplay/Steam/Steam-Generation.md),learn how to transport steam using pipes. You'll also need a wrench to set the _exhaust_, just sneak and right click on the center of the face you want to set the exhaust to!
 
 
 ## In this tier
