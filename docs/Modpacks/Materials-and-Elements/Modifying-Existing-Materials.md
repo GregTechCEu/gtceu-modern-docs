@@ -77,6 +77,8 @@ Editing the color of an existing material:
 
 ```js title="material_modification.js"
     GTCEuStartupEvents.materialModification(event => {
-        GTMaterials.BismuthBronze.setMaterialARGB(0x82AD92)
+        GTMaterials.BismuthBronze.setMaterialARGB(0x82AD92) //[*] (1)
     })
 ```
+
+1. You can use most methods in the [``Material`` class](https://github.com/GregTechCEu/GregTech-Modern/blob/1.20.1/src/main/java/com/gregtechceu/gtceu/api/data/chemical/material/Material.java) in the ``materialModification`` event
