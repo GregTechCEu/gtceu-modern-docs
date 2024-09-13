@@ -71,3 +71,12 @@ You can also add flags to existing materials:
         
     });
 ```
+
+Editing the color of an existing material:
+
+
+```js title="material_modification.js"
+    GTCEuStartupEvents.materialModification(event => {
+        GTMaterials.BismuthBronze.setMaterialARGB(0x82AD92)
+    })
+```
