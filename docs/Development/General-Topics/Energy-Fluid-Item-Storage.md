@@ -8,7 +8,7 @@ title: Item/Fluid/Energy Storage
 !!! note
 
     In general, these containers should be created as `final` fields (that's what we need for the
-    [SyncData](./SyncData/index.md) system).  
+    [SyncData](../SyncData/index.md) system).  
     Set their base arguments in the constructor (you can pass args for subclasses to modify).
 
 
