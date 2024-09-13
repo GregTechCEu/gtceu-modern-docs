@@ -36,7 +36,7 @@ Before you get started on the quest for steel, you'll need a few coke ovens _you
 
 This is a perfect time to learn about _wall sharing_, probably the **most** usefull feature for multiblocks, it is a feature which allows you to share the walls of a multiblock of the same type, so instead of making 58 coke bricks, you only need _49_ bricks with wall sharing.
 
-![Not wallsharing](./assets/non_wall_shareing.png)    ![Walsharing](./assets/wall_sharing.png)
+![Not wallsharing](./assets/non_wall_shareing.png){ style="hight=225;width=225"}    ![Walsharing](./assets/wall_sharing.png){ style="hight=225;width=225"}
 
 Now that you have steam machines, you will need a compresser to craft fireclay Bricks. From brick dust and clay dust, Craft fireclay dust. At a ratio of 1:1:2 
 
