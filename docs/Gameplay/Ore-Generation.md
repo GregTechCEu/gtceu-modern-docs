@@ -5,8 +5,8 @@ title: "Ore Generation"
 
 # Ore Generation
 
-This is an overview of GTCEu's ore veins and the ore types they contain. Wieght means frequency the higher the number the more common the vein and vice versa.
-Please note that these are the default settings and may be different in certain modpacks. There may be extra ore viens added, or frequency might be different, please refer to JEI in your modpack.
+This is an overview of GTCEu's ore veins and the ore types they contain. Weight means frequency the higher the number the more common the vein and vice versa.
+Please note that these are the default settings and may be different in certain modpacks. There may be extra ore veins added, or frequency might be different, please refer to JEI in your modpack.
 
 
 ## Overworld
