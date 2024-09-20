@@ -135,7 +135,7 @@ The API for vein modifications is the same as for creating new veins.
 
     ```js title="server_scripts/modify_all_veins.js"
     GTCEuServerEvents.oreVeins(event => {
-        event.modifyAll("gtceu:cassiterite_vein", (id, vein) => {
+        event.modifyAll((id, vein) => {
             console.log("Modifying vein: " + id)
             vein.density(1.0)
         })
