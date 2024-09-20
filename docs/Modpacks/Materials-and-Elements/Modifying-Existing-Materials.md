@@ -76,10 +76,9 @@ Editing the color of an existing material:
 
 
 ```js title="material_modification.js"
-    GTCEuStartupEvents.materialModification(event => { //(1)
-        GTMaterials.BismuthBronze.setMaterialARGB(0x82AD92) //(2)
+    GTCEuStartupEvents.materialModification(event => {
+        GTMaterials.BismuthBronze.setMaterialARGB(0x82AD92) //(1)
     })
 ```
 
-1. You can use both the `gtceu:material` event as well as `materialModification` to modify materials from both GT and its addons. However, you cannot register materials in `materialModification`.
-2. Most methods in the [``Material`` class](https://github.com/GregTechCEu/GregTech-Modern/blob/1.20.1/src/main/java/com/gregtechceu/gtceu/api/data/chemical/material/Material.java) can be used in the ``materialModification`` event
+1. Most methods in the [``Material`` class](https://github.com/GregTechCEu/GregTech-Modern/blob/1.20.1/src/main/java/com/gregtechceu/gtceu/api/data/chemical/material/Material.java) can be used in the ``materialModification`` event
