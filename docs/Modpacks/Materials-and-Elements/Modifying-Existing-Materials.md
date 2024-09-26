@@ -29,7 +29,7 @@ All periodic table elements are present in GT, but some of them don't have any p
 
 Adding fluids to existing materials requires a bit of work with the new FluidStorage system
 
-```js title=fluid_property.js"
+```js title="fluid_property.js"
 
 const $FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty');
 const $FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder');
@@ -71,3 +71,14 @@ You can also add flags to existing materials:
         
     });
 ```
+
+Editing the color of an existing material:
+
+
+```js title="material_modification.js"
+    GTCEuStartupEvents.materialModification(event => {
+        GTMaterials.BismuthBronze.setMaterialARGB(0x82AD92) //(1)
+    })
+```
+
+1. Most methods in the [``Material`` class](https://github.com/GregTechCEu/GregTech-Modern/blob/1.20.1/src/main/java/com/gregtechceu/gtceu/api/data/chemical/material/Material.java) can be used in the ``materialModification`` event
