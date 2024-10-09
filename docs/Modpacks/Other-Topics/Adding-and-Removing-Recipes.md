@@ -91,8 +91,8 @@ ServerEvents.recipes(event => {
         - `.chancedFluidOutput()`
 - Energy:
     - `.inputEU()`: Makes the recipe consume a lump sum of EU to start the recipe. Most often seen in fusion reactor recipes.
-    -  `outputEU()`: Makes the recipe produce a lump sum of EU upon recipe completion.
-    - `.EUt()`: Takes a numerical value. Positive values will make the recipe consume energy, negative ones will make it generate energy.
+    - `.outputEU()`: Makes the recipe produce a lump sum of EU upon recipe completion.
+    - `.EUt()`: Takes a numerical value represesnting an EU amount. Positive values will make the recipe consume energy per tick, negative ones will make it generate energy per tick.
 - More granular functionality:
     - `.perTick()`: Using this will enable you to control whether a recipe input/output is consumed/produced per tick the recipe is running or all at once at recipe start/end. Set to true with `.perTick(true)` to make the recipe builder consider any following input/output calls as per-tick. Remember to set the value to false with `.perTick(false)` after the calls you intend to be per-tick, to prevent behaviour you don't want!
 
