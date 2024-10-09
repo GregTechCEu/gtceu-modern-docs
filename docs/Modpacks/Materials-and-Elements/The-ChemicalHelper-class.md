@@ -23,7 +23,7 @@ If there is no associated Material, the method returns `null`. A `Fluid` may als
   - `.getBlockTags()`
     - Takes a `TagPrefix` and a non-`null` `Material` as input and returns the first item or block tag
       (or a Java array of all item or block tags if the plural functions are used) possessed by the item represented by that `TagPrefix`-`Material` combination.
-  - `.get()`: Takes a `TagPrefix`, a `Material` and optionally a number that otherwise defaults to 1, and returns an ItemStack representing that `TagPrefix`-`Material` combination, of the specified size.
+  - `.get()`: Takes a `TagPrefix`, a `Material` and optionally an item count that otherwise defaults to 1, and returns an ItemStack representing that `TagPrefix`-`Material` combination with the specified item count.
 
 Some usage examples:
 
