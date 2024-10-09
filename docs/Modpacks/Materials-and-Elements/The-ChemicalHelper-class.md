@@ -7,7 +7,7 @@ contains a number of useful methods that can ease working with GTCEu Materials i
 
 ## Useful functions that ChemicalHelper offers
 The following functions are available for use by packmakers:
-  - `.getMaterial()`: can take almost any form of item reference (`Item`, `ItemStack`, 'Ingredient' and so on) and will return the `Material` entry associated with it.
+  - `.getMaterial()`: can take almost any form of item reference (`Item`, `ItemStack`, `Ingredient` and so on) and will return the `Material` entry associated with it.
 If there is no associated Material, the method returns `null`. A `Fluid` may also be passed as input.
   - `.getPrefix()`: Takes an item reference as input and will return the TagPrefix it is associated with it. If there is non associated, the method will return `null`.
   - `.getIngot()`
