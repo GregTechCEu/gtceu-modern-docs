@@ -30,7 +30,7 @@ ServerEvents.recipes(event => {
 
 ## Modifiying Recipes
 
-With KubeJS it is possible to modfiy the Inputs or Outputs of existing GTCEu Modern recipes, which uses the same method of targeting the recipes.
+With KubeJS it is possible to modify the Inputs or Outputs of existing GTCEu Modern recipes, which uses the same method of targeting the recipes.
 
 ```js title="gtceu_modify.js"
 ServerEvents.recipes(event => {
@@ -40,7 +40,7 @@ ServerEvents.recipes(event => {
 ```
 
 1. Targets all gtceu recipes that have and input of `minecraft:sand` and replaces it with `#forge:sand`.
-2. Targets all gtceu arc furnace recipes that have and output of `gtceu:wrought_iron_ingot` and replaces it with `minecraft:dirt`.
+2. Targets all gtceu arc furnace recipes that have an output of `gtceu:wrought_iron_ingot` and replaces it with `minecraft:dirt`.
 
 
 ## Adding Recipes
@@ -84,13 +84,14 @@ ServerEvents.recipes(event => {
         - `.itemOutputs()`
         - `.chancedOutput()`
     - Fluids:
-        - `.outputFluids`
+        - `.outputFluids()`
         - `.chancedFluidOutput()`
-- Energy:   
+- Energy:
+    - `.EUt()`
 
 ### Research
 
-In GTCEu there exists the `Research System` which allows for adding extra requirements to recipes such as: Scanner Research, Station Research and Computation.
+GTCEu has Research System which allows for adding extra requirements to recipes such as: Scanner Research, Station Research and Computation.
 
 ```js title="scanner_research.js"
 ServerEvents.recipes(event => {
@@ -118,22 +119,19 @@ ServerEvents.recipes(event => {
 
 1. Just like `Scanner Research` `Station Research` accepts an `ItemStack` input in the `.researchStack()` object, however you can only define `EUt` and `CWUt` outside of the `.researchStack()` object. `CWUt` is used to define the duration of the `Station Research` recipe.
 
-### Rhino Jank
+### Rock breaker fluids
 
 !!! warning
-    Due to some Rhino Jank, when adding rock breaker recipes you will need to manually tell Rhino how to interpret `.addData()`.
+    When adding rock breaker recipes you will need to manually define the fluids the rock breaker will use. (might change in the future)
 
-```js title="rhino_jank_rock_breaker.js"
+```js title="rock_breaker.js"
 ServerEvents.recipes(event => {
-    const RockBreakerCondition = Java.loadClass("com.gregtechceu.gtceu.common.recipe.RockBreakerCondition")
-
     event.recipes.gtceu.rock_breaker('rhino_jank')
         .notConsumable('minecraft:dirt')
         .itemOutputs('minecraft:dirt')
-        ["addData(java.lang.String,java.lang.String)"]("fluidA", "minecraft:lava")
-        ["addData(java.lang.String,java.lang.String)"]("fluidB", "minecraft:water")
+        .addDataString("fluidA", "minecraft:lava")
+        .addDataString("fluidB", "minecraft:water")
         .duration(16)
         .EUt(30)
-        .addCondition(RockBreakerCondition.INSTANCE)
 })
 ```
