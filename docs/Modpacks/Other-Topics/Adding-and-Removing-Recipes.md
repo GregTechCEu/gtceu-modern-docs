@@ -65,8 +65,10 @@ ServerEvents.recipes(event => {
 })
 ```
 
-### Event Addons
-
+### Event calls for adding inputs and outputs
+- Basic calls:
+    - `.input()`: The most basic input definition available. Takes two parameters: one RecipeCapability that defines what input type this call is supposed to be (usually an item, a fluid or energy, but can also be, for example, Create Stress Units), and an Object that defines the input itself. Available RecipeCapabilities can be found in the GTCEu Modern GitHub or the mod's .JAR file, but the class containing all of GTCEu Modern's native RecipeCapabilities, `GTRecipeCapabilites`, must be manually loaded in your scripts. This method is unwieldy to use in Javascript; it is more user-friendly to use the ones below that clearly tell you what input type they call.
+    - `.output()`: As above, but defines an output instead. Takes the exact same parameters. This method is likewise unwieldy to use; it is more user-friendly to use the ones below that clearly tell you what output type they call.
 - Inputs:
     - Items:
         - `.itemInput()`
@@ -76,6 +78,7 @@ ServerEvents.recipes(event => {
     - Fluids:
         - `.inputFluids()`
         - `.chancedFluidInput()`
+        - `.notConsumableFluid()`
     - Misc:
         - `.circuit()`
 - Outputs:
@@ -87,10 +90,13 @@ ServerEvents.recipes(event => {
         - `.outputFluids()`
         - `.chancedFluidOutput()`
 - Energy:
-    - `.EUt()`
+    - `.inputEU()`: Makes the recipe consume a lump sum of EU to start the recipe. Most often seen in fusion reactor recipes.
+    - `.outputEU()`: Makes the recipe produce a lump sum of EU upon recipe completion.
+    - `.EUt()`: Takes a numerical value represesnting an EU amount. Positive values will make the recipe consume energy per tick, negative ones will make it generate energy per tick.
+- More granular functionality:
+    - `.perTick()`: Using this will enable you to control whether a recipe input/output is consumed/produced per tick the recipe is running or all at once at recipe start/end. Set to true with `.perTick(true)` to make the recipe builder consider any following input/output calls as per-tick. Remember to set the value to false with `.perTick(false)` after the calls you intend to be per-tick, to prevent behaviour you don't want!
 
-### Research
-
+### The Research System
 GTCEu has Research System which allows for adding extra requirements to recipes such as: Scanner Research, Station Research and Computation.
 
 ```js title="scanner_research.js"
