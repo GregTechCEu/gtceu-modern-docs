@@ -56,13 +56,13 @@ The following calls are available for each TagPrefix:
 
 A more illustrative example, using some Applied Energistics 2 items:
 
-  ```js title="setignored_usage_example.js"
-  GTCEuStartupEvents.materialModification(event => { // (1)
-      TagPrefix.gemChipped.setIgnored(GTMaterialRegistry.getMaterial("fluix_crystal")) // (2)
-      TagPrefix.rock.setIgnored(GTMaterialRegistry.getMaterial("sky_stone"), AEBlocks.SKY_STONE_BLOCK) // (3)
-      TagPrefix.ingot.removeIgnored(GTMaterials.Iron) // (4)
-  })
-  ```
+```js title="setignored_usage_example.js"
+GTCEuStartupEvents.materialModification(event => { // (1)
+    TagPrefix.gemChipped.setIgnored(GTMaterialRegistry.getMaterial("fluix_crystal")) // (2)
+    TagPrefix.rock.setIgnored(GTMaterialRegistry.getMaterial("sky_stone"), AEBlocks.SKY_STONE_BLOCK) // (3)
+    TagPrefix.ingot.removeIgnored(GTMaterials.Iron) // (4)
+})
+```
 
 1. This event has no methods such as `event.create()`, as it is not intended to be used to create anything, only tweak
    pre-existing Material associations. In fact, this event has no accessible methods whatsoever.
