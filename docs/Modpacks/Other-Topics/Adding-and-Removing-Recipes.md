@@ -74,10 +74,10 @@ ServerEvents.recipes(event => {
     - `.input()`:  
       The most basic input definition available. Takes two parameters: one RecipeCapability that defines what input type
       this call is supposed to be (usually an item, a fluid or energy), and an Object that defines the input itself.
-      Available RecipeCapabilities can be found in the GTCEu Modern
-      GitHub or the mod's .JAR file, but the class containing all of GTCEu Modern's native RecipeCapabilities,
-      `GTRecipeCapabilites`, must be manually loaded in your scripts. This method is unwieldy to use in Javascript; it
-      is more user-friendly to use the ones below that clearly tell you what input type they call.
+      Available RecipeCapabilities can be found in the GTCEu Modern GitHub or the mod's .JAR file, but the class containing
+      all of GTCEu Modern's native RecipeCapabilities, `GTRecipeCapabilites`, must be manually loaded in your scripts.
+      This method is unwieldy to use in Javascript; it is more user-friendly to use the ones below that clearly tell you
+      what input type they call.
     - `.output()`:  
       As above, but defines an output instead. Takes the exact same parameters. This method is likewise unwieldy to use;
       it is more user-friendly to use the ones below that clearly tell you what output type they call.
