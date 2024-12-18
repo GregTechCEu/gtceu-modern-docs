@@ -48,3 +48,37 @@ GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
         .parent('shiny')
 })
 ```
+
+## Available Icon Set Hierarchy
+
+Icon sets may define only a specific subset of icons.
+In case an icon set doesn't contain a specific icon for an item, the respective icon from its parent will be used.
+
+The root icon set is `DULL`
+
+```mermaid
+graph BT
+    METALLIC --> DULL
+    MAGNETIC --> METALLIC
+    SHINY --> METALLIC
+    BRIGHT --> SHINY
+    DIAMOND --> SHINY
+    EMERALD --> DIAMOND
+    GEM_HORIZONTAL --> EMERALD
+    GEM_VERTICAL --> EMERALD
+    RUBY --> EMERALD
+    OPAL --> RUBY
+    GLASS --> RUBY
+    NETHERSTAR --> GLASS
+    FINE --> DULL
+    SAND --> FINE
+    WOOD --> FINE
+    ROUGH --> FINE
+    FLINT --> ROUGH
+    LIGNITE --> ROUGH
+    QUARTZ --> ROUGH
+    CERTUS --> QUARTZ
+    LAPIS --> QUARTZ
+    FLUID --> DULL
+    RADIOACTIVE --> METALLIC
+```
